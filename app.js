@@ -4,6 +4,11 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import 'dotenv/config';
 
+import connectDB from './src/config/db.js';
+
+//in here I connect to my MongoDB Atlas before starting the server
+connectDB();
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
