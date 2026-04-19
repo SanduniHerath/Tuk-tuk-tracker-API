@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
-//in here I use schema to define the structure of my province data in my MongoDB db
+//in here I use schema to define the structure of my policestation data in my MongoDB db
 const { Schema } = mongoose;
 
-//this is my province model
-//in here I store Sri Lanka's 9 provinces
-//as an ex: { name: "Central", code: "C" }
+//this is my policestation model
+//in here I store details of police stations across Sri Lanka
+//each station is linked to both a district and a province for easy filtering
 const policeStationSchema = new Schema(
     {
         name: {
