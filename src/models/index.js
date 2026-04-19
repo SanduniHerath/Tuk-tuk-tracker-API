@@ -1,10 +1,10 @@
-import Province from "./province";
-import District from "./district";
-import PoliceStation from "./policestation";
-import Driver from "./driver";
-import Tuktuk from "./tuktuk";
-import LocationPing from "./locationPing";
-import User from "./user";
+import Province from "./province.js";
+import District from "./district.js";
+import PoliceStation from "./policestation.js";
+import Driver from "./driver.js";
+import Tuktuk from "./tuktuk.js";
+import LocationPing from "./locationPing.js";
+import User from "./user.js";
 
 export { 
     Province, 
