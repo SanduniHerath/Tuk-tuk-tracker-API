@@ -62,4 +62,20 @@ app.listen(PORT, () => {
   console.log(`Health check available at: http://localhost:${PORT}/health`);
 })
 
+// Connect to MongoDB & Start Server
+// I use an async function to ensure the database is connected BEFORE the server starts listening
+const startServer = async () => {
+    try {
+        await connectDB(); // Wait for MongoDB to finish connecting
+        app.listen(PORT, () => {
+            console.log(`🚀 Server running on port ${PORT}`);
+        });
+    } catch (error) {
+        console.error('❌ Failed to start server:', error.message);
+        process.exit(1); // Stop the app if it can't connect to the database
+    }
+};
+
+startServer();
+
 export default app;
