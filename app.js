@@ -48,6 +48,7 @@ app.get('/health', (req,res) => {
   });
 });
 
+
 //In here I handle 404 errors
 // if someone tries to access a route that doesnt exit, then this middleware will send a clear msg
 app.use((req,res) => {
@@ -58,11 +59,7 @@ app.use((req,res) => {
 
 })
 
-//Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-  console.log(`Health check available at: http://localhost:${PORT}/health`);
-})
+app.use(errorHandler); //this should be the last middleware
 
 // Connect to MongoDB & Start Server
 // I use an async function to ensure the database is connected BEFORE the server starts listening
@@ -71,6 +68,7 @@ const startServer = async () => {
         await connectDB(); // Wait for MongoDB to finish connecting
         app.listen(PORT, () => {
             console.log(`Server running on port ${PORT}`);
+            console.log(`Health check available at: http://localhost:${PORT}/health`);
         });
     } catch (error) {
         console.error('Failed to start server:', error.message);
@@ -78,7 +76,6 @@ const startServer = async () => {
     }
 };
 
-app.use(errorHandler); //this should be the last middleware
 
 startServer();
 
