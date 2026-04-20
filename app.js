@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import 'dotenv/config';
 
 import connectDB from './src/config/db.js';
+import errorHandler from './src/middleware/errorHandler.js';
 
 //in here I connect to my MongoDB Atlas before starting the server
 connectDB();
@@ -34,6 +35,7 @@ app.use(express.urlencoded({ extended: true })); // parse URL-encoded data
 //in here I use morgan() to log incoming HTTP requests to my terminal while developing the API, it helps me to see what requests are coming in and how my API is responding
 //as an example when someone makes a GET request to /api/tuktuks, it will log something like "GET /api/tuktuks 200 15ms"
 app.use(morgan('dev')); 
+
 
 // Define a simple health check route for testing the server is alive
 // By defining it I can visit http://localhost:3000/health to check if the server is running and responding with a 200 status code and a message "Tuk tuk tracker API is running successfully!"
@@ -68,13 +70,15 @@ const startServer = async () => {
     try {
         await connectDB(); // Wait for MongoDB to finish connecting
         app.listen(PORT, () => {
-            console.log(`🚀 Server running on port ${PORT}`);
+            console.log(`Server running on port ${PORT}`);
         });
     } catch (error) {
-        console.error('❌ Failed to start server:', error.message);
+        console.error('Failed to start server:', error.message);
         process.exit(1); // Stop the app if it can't connect to the database
     }
 };
+
+app.use(errorHandler); //this should be the last middleware
 
 startServer();
 
