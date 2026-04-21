@@ -9,8 +9,9 @@ import connectDB from './src/config/db.js';
 import swaggerSetup from './src/config/swagger.js';
 import errorHandler from './src/middleware/errorHandler.js';
 
-//Route Imports
+// Route Imports
 import authRoutes from './src/routes/auth.routes.js';
+import masterRoutes from './src/routes/master.routes.js';
 
 //initialize express
 const app = express();
@@ -38,6 +39,7 @@ swaggerSetup(app);
 
 // ─── API ROUTES ──────────────────────────────────────────────────────
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/master', masterRoutes);
 
 //here I setup a health check route to verify the cloud deployment is live
 app.get('/health', (req, res) => {
@@ -63,11 +65,11 @@ const startServer = async () => {
     try {
         await connectDB();//ensure db is ready
         app.listen(PORT, () => {
-            console.log(`Foundation Server running on port ${PORT}`);
-            console.log(`API Specs: http://localhost:${PORT}/api-docs`);
+            console.log(`🚀 Foundation Server running on port ${PORT}`);
+            console.log(`📖 API Specs: http://localhost:${PORT}/api-docs`);
         });
     } catch (error) {
-        console.error('CRITICAL: Failed to start server:', error.message);
+        console.error('❌ CRITICAL: Failed to start server:', error.message);
         process.exit(1);
     }
 };
