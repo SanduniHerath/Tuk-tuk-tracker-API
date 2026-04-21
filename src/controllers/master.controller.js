@@ -7,7 +7,7 @@ import { Province, District, PoliceStation } from '../models/index.js';
  */
 export const getProvinces = async (req, res, next) => {
   try {
-    //find all provinces and sort them by name alphabetically
+    //find all provinces by sorting them alphabetically
     const data = await Province.find().sort('name');
     res.status(200).json({ success: true, count: data.length, data });
   } catch (error) {
@@ -23,10 +23,9 @@ export const getProvinces = async (req, res, next) => {
 export const getDistricts = async (req, res, next) => {
   try {
     const filter = {};
-    if (req.query.province) filter.province = req.query.province; //allows filtering by province ID
+    if (req.query.province) filter.province = req.query.province;//filtering by province ID
 
-    //here we use .populate() to automatically fetch the parent Province details
-    //this is a Level 5 requirement for relational data handling
+    //in here I use .populate() to automatically fetch the parent Province details
     const data = await District.find(filter).populate('province').sort('name');
     res.status(200).json({ success: true, count: data.length, data });
   } catch (error) {
@@ -37,7 +36,7 @@ export const getDistricts = async (req, res, next) => {
 /**
  * @desc    Create a new Province (Admin setup)
  * @route   POST /api/v1/master/provinces
- * @access  Private (HQ Admin only)
+ * @access  Private to hq admin only
  */
 export const createProvince = async (req, res, next) => {
   try {
@@ -51,7 +50,7 @@ export const createProvince = async (req, res, next) => {
 /**
  * @desc    Create a new District (Admin setup)
  * @route   POST /api/v1/master/districts
- * @access  Private (HQ Admin only)
+ * @access  Private to hq admin only
  */
 export const createDistrict = async (req, res, next) => {
   try {
