@@ -1,35 +1,31 @@
-import jwt from 'jsonwebtoken'; // Industry standard for creating secure tokens
-import { User } from '../models/index.js'; // To look up users in the database
+import jwt from 'jsonwebtoken'; //create JWT tokens
+import { User } from '../models/index.js'; //to look up users in the database
 
-/**
- * PROTECT MIDDLEWARE
- * This stands guard at the door. If a user doesn't have a valid JWT, 
- * they cannot enter.
- */
+//in here I setup the protect middleware which checks if the user has a valid JWT token
 export const protect = async (req, res, next) => {
   try {
     let token;
 
-    // 1. Check the "Authorization" header for the token
+    //check the authorization header for the token
     if (req.headers.authorization?.startsWith('Bearer ')) {
       token = req.headers.authorization.split(' ')[1];
     }
 
     if (!token) {
-      return res.status(401).json({ success: false, message: 'Access Denied. No security token provided.' });
+      return res.status(401).json({ success: false, message: 'Access Denied. Not authorized.' });
     }
 
-    // 2. Decode the token using your secret key from .env
+    //decode the token from my env secret key
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    // 3. Find the user in the DB and attach them to the request object
+    //find the user in db and attach them to the request object
     const user = await User.findById(decoded.id).select('-password');
 
     if (!user) {
       return res.status(401).json({ success: false, message: 'User not found or account deactivated.' });
     }
 
-    // 4. Everything is fine! Let the user through
+    //let the user through to the next middleware
     req.user = user;
     next();
   } catch (error) {
@@ -37,10 +33,8 @@ export const protect = async (req, res, next) => {
   }
 };
 
-/**
- * AUTHORIZE MIDDLEWARE (RBAC)
- * This checks your "Role". An Officer cannot access HQ Admin files.
- */
+//in here I setup the authorize middleware which checks the role of the user - RBAC
+//as an example an officer cannot access HQ admin files
 export const authorize = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {

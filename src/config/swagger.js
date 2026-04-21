@@ -1,27 +1,25 @@
-import swaggerJsdoc from 'swagger-jsdoc'; // Logic that reads your code comments to build the docs
-import swaggerUi from 'swagger-ui-express'; // The UI layer that makes the docs look beautiful
+import swaggerJsdoc from 'swagger-jsdoc'; //logic that reads my code comments to build the docs
+import swaggerUi from 'swagger-ui-express';
 
-/**
- * Swagger/OpenAPI Configuration
- * Level 5 Marks: Industry-standard documentation for professional university coursework.
- */
+
+//setup swagger configuration 
 const options = {
   definition: {
-    openapi: '3.0.0', // The version of OpenAPI we are using
+    openapi: '3.0.0', //version
     info: {
-      title: 'Tuk-Tuk Tracker API', // Project title
-      version: '1.0.0', // Development version
+      title: 'Tuk-Tuk Tracker API',
+      version: '1.0.0',//dev version
       description: 'Official API documentation for the Real-Time Three-Wheeler Tracking and Movement Logging System (Sri Lanka Police)',
     },
     servers: [
       {
-        url: '/api/v1', // Base path for development
+        url: '/api/v1',//base path for development
         description: 'Local development server',
       },
     ],
     components: {
       securitySchemes: {
-        bearerAuth: { // Allows JWT token input directly in the browser UI
+        bearerAuth: { //use jwt token input directly in the browser ui
           type: 'http',
           scheme: 'bearer',
           bearerFormat: 'JWT',
@@ -29,14 +27,15 @@ const options = {
       },
     },
   },
-  // Tells Swagger to scan all route and model files for documentation comments
+
+  //tells swagger to map all the models and routes to make the docs
   apis: ['./src/routes/*.js', './src/models/*.js'],
 };
 
-// Generate the spec object
+//generate the spec object
 const specs = swaggerJsdoc(options);
 
-// Plugs Swagger into your server
+//connects swagger to the server
 const swaggerSetup = (app) => {
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs, {
     customSiteTitle: "Tuk-Tuk Tracker Documentation"
