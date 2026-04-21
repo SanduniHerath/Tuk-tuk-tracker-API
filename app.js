@@ -9,6 +9,9 @@ import connectDB from './src/config/db.js';
 import swaggerSetup from './src/config/swagger.js';
 import errorHandler from './src/middleware/errorHandler.js';
 
+//Route Imports
+import authRoutes from './src/routes/auth.routes.js';
+
 //initialize express
 const app = express();
 
@@ -19,7 +22,7 @@ const PORT = process.env.PORT || 3000;
 app.use(helmet({ contentSecurityPolicy: false })); //in here I disable CSP so that swagger load correctly
 app.use(cors());//allow all origins
 app.use(express.json({ limit: '10kb' })); //set safety limit of 10kb to prevent large payloads from crashing the server 
-app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev')); //log requests properly
+app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev')); //in here I set the morgan to log requests in production mode and in development mode it will log all the requests
 
 
 //here I setup rate limiting to prevent ddos attacks 
@@ -31,9 +34,10 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);//only apply to api routes
 
-//Documentation
 swaggerSetup(app);
 
+// ─── API ROUTES ──────────────────────────────────────────────────────
+app.use('/api/v1/auth', authRoutes);
 
 //here I setup a health check route to verify the cloud deployment is live
 app.get('/health', (req, res) => {
@@ -59,11 +63,11 @@ const startServer = async () => {
     try {
         await connectDB();//ensure db is ready
         app.listen(PORT, () => {
-            console.log(`🚀 Foundation Server running on port ${PORT}`);
-            console.log(`📖 API Specs: http://localhost:${PORT}/api-docs`);
+            console.log(`Foundation Server running on port ${PORT}`);
+            console.log(`API Specs: http://localhost:${PORT}/api-docs`);
         });
     } catch (error) {
-        console.error('❌ CRITICAL: Failed to start server:', error.message);
+        console.error('CRITICAL: Failed to start server:', error.message);
         process.exit(1);
     }
 };
