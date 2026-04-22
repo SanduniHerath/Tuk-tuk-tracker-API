@@ -17,9 +17,10 @@ class ApiFeatures {
     //so that I can use the remaining query string for filtering
     excludedFields.forEach(el => delete queryObj[el]);
 
-    //in here I setup advanced filtering for operators like gte, gt, lte, lt
+    //in here advanced filtering for operators like gte, gt, lte, lt
+    //I transform 'gte' -> '$gte' so MongoDB understands it
     let queryStr = JSON.stringify(queryObj);
-    queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
+    queryStr = queryStr.replace(/\b(gte|gt|lte|lt|ne)\b/g, (match) => `$${match}`);
 
     this.query = this.query.find(JSON.parse(queryStr));
     return this;
