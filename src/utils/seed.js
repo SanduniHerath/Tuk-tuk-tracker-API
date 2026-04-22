@@ -2,22 +2,22 @@ import mongoose from 'mongoose';
 import 'dotenv/config';
 import { Province, District, Tuktuk, Driver, LocationPing, User, PoliceStation } from '../models/index.js';
 
-//in here, I simulate the database with dummy data which contains
-//9 provinces, 25 districts, 10 stations, 100 tuk tuk drivers, 100 tuk tuks, 1 week history
+//this is my data simulation script
+//it includes - 9 provinces, 25 districts, 25 police stations, 200 tuk tuks, 200 drivers, 1 week history, 3 users (hq admin, station officer, device)
 const seedDB = async () => {
   try {
-    console.log('Starting Simulation Engine...');
+    console.log('Starting data simulation');
     await mongoose.connect(process.env.MONGO_URI);
     console.log('Connected to MongoDB Atlas.\n');
 
-    //in here, I clear all the existing data to start fresh
-    console.log('Wiping existing data for a clean simulation...');
+    //clear existing data in the db to start fresh
+    console.log('clear data for clean simulation');
     await Promise.all([
       Province.deleteMany(), District.deleteMany(), PoliceStation.deleteMany(),
       Driver.deleteMany(), Tuktuk.deleteMany(), LocationPing.deleteMany(), User.deleteMany()
     ]);
 
-    //create 9 provinces of Sri Lanka
+    //create 9 provinces
     const provinceData = [
       { name: 'Western', code: 'WP' }, { name: 'Central', code: 'CP' },
       { name: 'Southern', code: 'SP' }, { name: 'Northern', code: 'NP' },
@@ -28,7 +28,7 @@ const seedDB = async () => {
     const insertedProvinces = await Province.insertMany(provinceData);
     const getProv = (code) => insertedProvinces.find(p => p.code === code)._id;
 
-    //create 25 districts in Sri Lanka
+    //create 25 districts
     const districtData = [
       { name: 'Colombo', province: getProv('WP') }, { name: 'Gampaha', province: getProv('WP') }, { name: 'Kalutara', province: getProv('WP') },
       { name: 'Kandy', province: getProv('CP') }, { name: 'Matale', province: getProv('CP') }, { name: 'Nuwara Eliya', province: getProv('CP') },
@@ -41,36 +41,27 @@ const seedDB = async () => {
       { name: 'Ratnapura', province: getProv('SB') }, { name: 'Kegalle', province: getProv('SB') }
     ];
     const insertedDistricts = await District.insertMany(districtData);
-    console.log('Geography Synchronized: 9 Provinces, 25 Districts.\n');
+    console.log('9 Provinces, 25 Districts Synchronized.\n');
 
-    //create 25 police stations which are mapped to each district
-    const stationData = insertedDistricts.map(d => ({
+    //create 25 police stations
+    const stationData = insertedDistricts.map((d, i) => ({
       name: `${d.name} Central Police Station`,
-      policeStationCode: `${d.name.substring(0, 3).toUpperCase()}-101`,
+      policeStationCode: `${d.name.substring(0, 3).toUpperCase()}-${101 + i}`,
       district: d._id,
       province: d.province
     }));
-    await PoliceStation.insertMany(stationData);
-    console.log('25 Police Stations built.\n');
+    const insertedStations = await PoliceStation.insertMany(stationData);
+    console.log('25 police stations established\n');
 
-    //create users (hq admin & station officer)
-    const admin = await User.create({
-      username: 'hq_admin',
-      password: 'password123',
-      fullname: 'Master Admin - Police HQ',
-      role: 'hq_admin'
-    });
-    console.log('Administrative Users created (Login: hq_admin / password123)\n');
-
-    //create 100 drivers and 100 tuk tuks
-    console.log('Generating 100 vehicles across the island...');
+    //create 200 tuk tuks and drivers
+    console.log('Generating 200 tuktuks and drivers across Sri Lanka');
     const driversToInsert = [];
     const tuktuksToInsert = [];
 
-    for (let i = 1; i <= 100; i++) {
-      const district = insertedDistricts[i % 25];//spread those drivers and tuk tuks across 25 districts
-
+    for (let i = 1; i <= 200; i++) {
+      const district = insertedDistricts[i % 25];
       const driverId = new mongoose.Types.ObjectId();
+
       driversToInsert.push({
         _id: driverId,
         fullName: `Driver Name ${i}`,
@@ -81,34 +72,40 @@ const seedDB = async () => {
       });
 
       tuktuksToInsert.push({
-        registrationNo: `${district.name.substring(0, 2)}-${1000 + i}`,
+        registrationNo: `${district.name.substring(0, 2).toUpperCase()}-${1000 + i}`,
         driver: driverId,
         district: district._id,
         province: district.province,
-        status: i % 10 === 0 ? 'flagged' : 'active'
+        status: i % 20 === 0 ? 'flagged' : 'active'
       });
     }
-
     await Driver.insertMany(driversToInsert);
     const insertedTuktuks = await Tuktuk.insertMany(tuktuksToInsert);
-    console.log(`Fleet Ready: 100 Drivers & 100 Tuk-Tuks registered.\n`);
+    console.log('200 tuk tuks successfully registered\n');
 
-    //simulate location history - movement tracking
-    console.log('Generating 1 Week of Simulation movement history...');
+    //create users - hq admin, station officer, device
+    const colombo = insertedDistricts.find(d => d.name === 'Colombo');
+    await User.create([
+      { username: 'hq_admin', password: 'password123', fullname: 'Master Admin', role: 'hq_admin' },
+      { username: 'station_officer', password: 'password123', fullname: 'Colombo Officer', role: 'station_officer', district: colombo._id, policeStation: insertedStations[0]._id },
+      { username: 'device_001', password: 'password123', fullname: 'Tuk-Tuk Tracking Device', role: 'device', tuktuk: insertedTuktuks[0]._id }
+    ]);
+    console.log('HQ, station, and device accounts created.\n');
+
+    //generate 1 week location history
+    console.log('Generating one week of location history');
     const pingsToInsert = [];
-    const sampleSize = 10; //I simulate only for 10 tuk tuks to keep it fast
+    const sampleVehicles = insertedTuktuks.slice(0, 15); //15 tuk tuks for location history
     const now = new Date();
 
-    for (let i = 0; i < sampleSize; i++) {
-      const tuktuk = insertedTuktuks[i];
-      for (let day = 0; day < 7; day++) { //7 days of data
-        for (let hour = 0; hour < 4; hour++) { //4 pings per day
+    for (const vehicle of sampleVehicles) {
+      for (let day = 0; day < 7; day++) {
+        for (let hour = 0; hour < 4; hour++) {
           pingsToInsert.push({
-            tuktuk: tuktuk._id,
+            tuktuk: vehicle._id,
             latitude: 6.9271 + (Math.random() - 0.5) * 0.1,
             longitude: 79.8612 + (Math.random() - 0.5) * 0.1,
-            speed: Math.floor(Math.random() * 45),
-            heading: Math.floor(Math.random() * 360),
+            speed: Math.floor(Math.random() * 40),
             timestamp: new Date(now.getTime() - (day * 24 * 60 * 60 * 1000) - (hour * 2 * 60 * 60 * 1000))
           });
         }
@@ -116,14 +113,13 @@ const seedDB = async () => {
     }
     await LocationPing.insertMany(pingsToInsert);
 
-    console.log('SIMULATION ENGINE COMPLETED SUCCESSFULLY!');
+    console.log('Data simulation completed');
     console.log('----------------------------------------------------');
     console.log('Total Provinces: 9');
     console.log('Total Districts: 25');
-    console.log('Total Tuk-Tuks: 100');
-    console.log('Total Drivers: 100');
     console.log('Total Police Stations: 25');
-    console.log('Total Location Pings: ' + pingsToInsert.length);
+    console.log('Total Tuk-Tuks: 200');
+    console.log('History Duration: 7 Days');
     process.exit(0);
   } catch (err) {
     console.error('SIMULATION FAILED:', err.message);
