@@ -9,9 +9,11 @@ import connectDB from './src/config/db.js';
 import swaggerSetup from './src/config/swagger.js';
 import errorHandler from './src/middleware/errorHandler.js';
 
-// Route Imports
+//import all the routes
 import authRoutes from './src/routes/auth.routes.js';
 import masterRoutes from './src/routes/master.routes.js';
+import driverRoutes from './src/routes/driver.routes.js';
+import tuktukRoutes from './src/routes/tuktuk.routes.js';
 
 //initialize express
 const app = express();
@@ -37,15 +39,17 @@ app.use('/api', limiter);//only apply to api routes
 
 swaggerSetup(app);
 
-// ─── API ROUTES ──────────────────────────────────────────────────────
+//in here, I setup all the routes
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/master', masterRoutes);
+app.use('/api/v1/drivers', driverRoutes);
+app.use('/api/v1/tuktuks', tuktukRoutes);
 
 //here I setup a health check route to verify the cloud deployment is live
 app.get('/health', (req, res) => {
-  res.status(200).json({ 
-    success: true, 
-    status: 'UP', 
+  res.status(200).json({
+    success: true,
+    status: 'UP',
     timestamp: new Date(),
     message: 'Tuk-Tuk Tracker API Foundation is stable.'
   });
@@ -62,16 +66,16 @@ app.use(errorHandler);
 
 //in here, I ensure that the db is connected before the server opens its ports
 const startServer = async () => {
-    try {
-        await connectDB();//ensure db is ready
-        app.listen(PORT, () => {
-            console.log(`🚀 Foundation Server running on port ${PORT}`);
-            console.log(`📖 API Specs: http://localhost:${PORT}/api-docs`);
-        });
-    } catch (error) {
-        console.error('❌ CRITICAL: Failed to start server:', error.message);
-        process.exit(1);
-    }
+  try {
+    await connectDB();//ensure db is ready
+    app.listen(PORT, () => {
+      console.log(`🚀 Foundation Server running on port ${PORT}`);
+      console.log(`📖 API Specs: http://localhost:${PORT}/api-docs`);
+    });
+  } catch (error) {
+    console.error('❌ CRITICAL: Failed to start server:', error.message);
+    process.exit(1);
+  }
 };
 
 startServer();
