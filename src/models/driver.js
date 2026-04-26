@@ -45,13 +45,9 @@ const driverSchema = new Schema(
         },
     },
 
-    //this adds createdAt and updatedAt to every doc
     { timestamps: true }
 );
 
-//this creates a model class called Driver with methods like find(), create(), findById()
-//it allows us to interact with the "Driver" collection in our MongoDB database
-const Driver = mongoose.model("Driver", driverSchema);
 
-//exporting the Driver model
+const Driver = mongoose.model("Driver", driverSchema);
 export default Driver;
