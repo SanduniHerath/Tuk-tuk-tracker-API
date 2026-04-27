@@ -6,12 +6,6 @@ import { User } from '../models/index.js';
 const signToken = (id) =>
   jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN || '7d' });
 
-
-/**
- * @desc    Register a new police officer
- * @route   POST /api/v1/auth/register
- * @access  Private
- */
 export const register = async (req, res, next) => {
   try {
     //in here, I create the user in the db using the data from the request body
@@ -20,7 +14,6 @@ export const register = async (req, res, next) => {
     //send a success message through 201 status code
     res.status(201).json({
       success: true,
-      message: 'New officer registered successfully.',
       data: { id: newUser._id, username: newUser.username, role: newUser.role }
     });
   } catch (error) {
@@ -28,12 +21,53 @@ export const register = async (req, res, next) => {
   }
 };
 
+export const updateUser = async (req, res, next) => {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
 
-/**
- * @desc    Login a police officer
- * @route   POST /api/v1/auth/login
- * @access  Private
- */
+    if (!updatedUser) {
+      return res.status(404).json({
+        success: false,
+        message: 'User not found'
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      data: {
+        id: updatedUser._id,
+        username: updatedUser.username,
+        role: updatedUser.role
+      }
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const deleteUser = async (req, res, next) => {
+  try {
+    const user = await User.findByIdAndDelete(req.params.id);
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'User not found'
+      });
+    }
+
+    res.status(204).send();
+
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const login = async (req, res, next) => {
   try {
     const { username, password } = req.body;
@@ -64,11 +98,6 @@ export const login = async (req, res, next) => {
   }
 };
 
-/**
- * @desc    Get profile of currently logged in user
- * @route   GET /api/v1/auth/me
- * @access  Private
- */
 export const getMe = async (req, res, next) => {
   //return user data 
   res.status(200).json({ success: true, data: req.user });

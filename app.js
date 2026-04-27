@@ -69,11 +69,11 @@ const startServer = async () => {
   try {
     await connectDB();//ensure db is ready
     app.listen(PORT, () => {
-      console.log(`🚀 Foundation Server running on port ${PORT}`);
-      console.log(`📖 API Specs: http://localhost:${PORT}/api-docs`);
+      console.log(`Foundation Server running on port ${PORT}`);
+      console.log(`API Specs: http://localhost:${PORT}/api-docs`);
     });
   } catch (error) {
-    console.error('❌ CRITICAL: Failed to start server:', error.message);
+    console.error('CRITICAL: Failed to start server:', error.message);
     process.exit(1);
   }
 };
