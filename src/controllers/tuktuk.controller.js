@@ -1,15 +1,50 @@
 import { Tuktuk } from '../models/index.js';
 import ApiFeatures from '../utils/apiFeatures.js';
 
-/**
- * @desc    Get all tuk-tuks with using advanced search techniques like filtering, sorting, field limiting and pagination
- * @route   GET /api/v1/tuktuks
- * @access  Private
- */
-
+//get all tuk tuk vehicles with filtering, sorting, field limiting and pagination
 export const getTuktuks = async (req, res, next) => {
   try {
-    //in here, I build the query using ApiFeatures class
+
+    //role based filtering
+    if (req.user.role === 'provincial_officer') {
+      req.query.province = req.user.province;
+    } else if (req.user.role === 'station_officer') {
+      req.query.district = req.user.district;
+    }
+
+    //here, i convert my district and province names into their corrosponding object IDs
+    //handle district name
+    if (req.query.district && isNaN(req.query.district)) {
+      const district = await District.findOne({
+        name: { $regex: `^${req.query.district}$`, $options: 'i' } // case-insensitive
+      });
+
+      if (!district) {
+        return res.status(404).json({
+          success: false,
+          message: 'District not found',
+        });
+      }
+
+      req.query.district = district._id;
+    }
+
+    //handle province name
+    if (req.query.province && isNaN(req.query.province)) {
+      const province = await Province.findOne({
+        name: { $regex: `^${req.query.province}$`, $options: 'i' }
+      });
+
+      if (!province) {
+        return res.status(404).json({
+          success: false,
+          message: 'Province not found',
+        });
+      }
+
+      req.query.province = province._id;
+    }
+    //in here, I apply all the API features to the query
     //I populate the query with driver, district and province to show full territorial details
     const features = new ApiFeatures(Tuktuk.find().populate('driver district province'), req.query)
       .filter()
@@ -18,29 +53,25 @@ export const getTuktuks = async (req, res, next) => {
       .paginate();
 
     //in here, I execute the query
-    const data = await features.query;
+    const tuktuks = await features.query;
 
+    //response
     res.status(200).json({
       success: true,
-      results: data.length,
-      data
+      results: tuktuks.length,
+      data: tuktuks
     });
   } catch (error) {
     next(error);
   }
 };
 
-/**
- * @desc    Get single tuk-tuk details by using ID
- * @route   GET /api/v1/tuktuks/:id
- * @access  Private
- */
-
+//get a single tuk tuk by registration number
 export const getTuktuk = async (req, res, next) => {
   try {
-    const data = await Tuktuk.findById(req.params.id).populate('driver district province');
+    const tuktuk = await Tuktuk.findOne({ registrationNumber: req.params.regNo }).populate('driver district province');
 
-    if (!data) {
+    if (!tuktuk) {
       return res.status(404).json({ success: false, message: 'Tuk-Tuk not found' });
     }
 
@@ -50,35 +81,25 @@ export const getTuktuk = async (req, res, next) => {
   }
 };
 
-/**
- * @desc    Register a new Tuk-Tuk
- * @route   POST /api/v1/tuktuks
- * @access  Private to hq_admin, provincial_officer, station_officer
- */
-
+//create a new tuk tuk
 export const createTuktuk = async (req, res, next) => {
   try {
-    const data = await Tuktuk.create(req.body);
+    const tuktuk = await Tuktuk.create(req.body);
     res.status(201).json({ success: true, data });
   } catch (error) {
     next(error);
   }
 };
 
-/**
- * @desc    Update Tuk-Tuk details
- * @route   PATCH /api/v1/tuktuks/:id
- * @access  Private
- */
-
+//update a tuk tuk by registration number
 export const updateTuktuk = async (req, res, next) => {
   try {
-    const data = await Tuktuk.findByIdAndUpdate(req.params.id, req.body, {
+    const tuktuk = await Tuktuk.findOneAndUpdate({ registrationNumber: req.params.regNo }, req.body, {
       new: true,
       runValidators: true
-    });
+    }).populate('driver district province');
 
-    if (!data) {
+    if (!tuktuk) {
       return res.status(404).json({ success: false, message: 'Tuk-Tuk not found' });
     }
 
@@ -88,17 +109,12 @@ export const updateTuktuk = async (req, res, next) => {
   }
 };
 
-/**
- * @desc    Delete Tuk-Tuk
- * @route   DELETE /api/v1/tuktuks/:id
- * @access  Private - hq_admin only
- */
-
+//delete a tuk tuk by registration number
 export const deleteTuktuk = async (req, res, next) => {
   try {
-    const data = await Tuktuk.findByIdAndDelete(req.params.id);
+    const tuktuk = await Tuktuk.findOneAndDelete({ registrationNumber: req.params.regNo });
 
-    if (!data) {
+    if (!tuktuk) {
       return res.status(404).json({ success: false, message: 'Tuk-Tuk not found' });
     }
 
