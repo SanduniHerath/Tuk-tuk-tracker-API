@@ -9,20 +9,14 @@ const router = express.Router();
 //in here, I protect all the tuk tuk routes
 router.use(protect);
 
-/**
- * @swagger
- * tags:
- *   name: Tuk Tuk Management
- *   description: Official registry of tuk tuk vehicles being tracked by the system
- */
+router.get('/', getTuktuks);
 
-router.route('/')
-  .get(getTuktuks) //any officer can search tuk tuks
-  .post(createTuktuk); //any officer can register a new tuk tuk
+router.get('/:regNo', getTuktuk);
 
-router.route('/:id')
-  .get(getTuktuk)
-  .patch(updateTuktuk)
-  .delete(authorize('hq_admin'), deleteTuktuk); //only hq admin can delete a tuktuk
+router.post('/', authorize('hq_admin', 'provincial_officer'), createTuktuk);
+
+router.put('/:regNo', authorize('hq_admin', 'provincial_officer', 'station_officer'), updateTuktuk);
+
+router.delete('/:regNo', authorize('hq_admin'), deleteTuktuk);
 
 export default router;

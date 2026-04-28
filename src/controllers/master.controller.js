@@ -1,10 +1,6 @@
 import { Province, District, PoliceStation } from '../models/index.js';
 
-/**
- * @desc    Get all Provinces in Sri Lanka
- * @route   GET /api/v1/master/provinces
- * @access  Private (All Officers)
- */
+//to get all provinces
 export const getProvinces = async (req, res, next) => {
   try {
     //find all provinces by sorting them alphabetically
@@ -15,11 +11,7 @@ export const getProvinces = async (req, res, next) => {
   }
 };
 
-/**
- * @desc    Get all Districts (with optional province filtering)
- * @route   GET /api/v1/master/districts
- * @access  Private (All Officers)
- */
+//get all districts
 export const getDistricts = async (req, res, next) => {
   try {
     const filter = {};
