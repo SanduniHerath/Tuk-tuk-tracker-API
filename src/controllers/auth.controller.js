@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { User } from '../models/index.js';
+import bcrypt from 'bcryptjs';
 
 //in here I setup a helper function to create a JWT token which is used to
 //create a unique security badge for an officer
@@ -10,21 +11,51 @@ export const register = async (req, res, next) => {
   try {
     //in here, I create the user in the db using the data from the request body
     const newUser = await User.create(req.body);
-
-    //send a success message through 201 status code
     res.status(201).json({
       success: true,
       data: { id: newUser._id, username: newUser.username, role: newUser.role }
     });
   } catch (error) {
-    next(error);//pass error to the central error handler
+    next(error);
   }
 };
 
+//get all users
+export const getAllUsers = async (req, res, next) => {
+  try {
+    const users = await User.find();
+    res.status(200).json({
+      success: true,
+      data: users
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+//get user by username
+export const getUser = async (req, res, next) => {
+  try {
+    const user = await User.findOne({ username: req.params.username });
+    res.status(200).json({
+      success: true,
+      data: user
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+//update user by username
 export const updateUser = async (req, res, next) => {
   try {
-    const updatedUser = await User.findByIdAndUpdate(
-      req.params.id,
+
+    //if the password is being updated, hash it before saving to the database
+    if (req.body.password) {
+      req.body.password = await bcrypt.hash(req.body.password, 10);
+    }
+    const updatedUser = await User.findOneAndUpdate(
+      { username: req.params.username },
       req.body,
       { new: true, runValidators: true }
     );
@@ -50,9 +81,14 @@ export const updateUser = async (req, res, next) => {
   }
 };
 
+//delete user by username
 export const deleteUser = async (req, res, next) => {
   try {
-    const user = await User.findByIdAndDelete(req.params.id);
+    const user = await User.findOneAndDelete(
+      { username: req.params.username },
+      req.body,
+      { new: true, runValidators: true }
+      );
 
     if (!user) {
       return res.status(404).json({
