@@ -42,7 +42,7 @@ const seedDB = async () => {
       { name: 'Batticaloa', province: getProv('EP'), code: 'BTC' }, { name: 'Ampara', province: getProv('EP'), code: 'AMP' }, { name: 'Trincomalee', province: getProv('EP'), code: 'TRK' },
       { name: 'Kurunegala', province: getProv('NW'), code: 'KGN' }, { name: 'Puttalam', province: getProv('NW'), code: 'PTL' },
       { name: 'Anuradhapura', province: getProv('NC'), code: 'AD' }, { name: 'Polonnaruwa', province: getProv('NC'), code: 'PLP' },
-      { name: 'Badulla', province: getProv('UP'), code: 'BDA' }, { name: 'Moneragala', province: getProv('UP'), code: 'MNR' },
+      { name: 'Badulla', province: getProv('UP'), code: 'BDA' }, { name: 'Moneragala', province: getProv('UP'), code: 'MON' },
       { name: 'Ratnapura', province: getProv('SB'), code: 'RT' }, { name: 'Kegalle', province: getProv('SB'), code: 'KGE' }
     ];
     const insertedDistricts = await District.insertMany(districtData);
@@ -50,7 +50,7 @@ const seedDB = async () => {
     //create 25 police stations (one for each district)
     const stationData = insertedDistricts.map((d, i) => ({
       name: `${d.name} Central Police Station`,
-      stationCode: `${d.name.substring(0, 3).toUpperCase()}-${101 + i}`,
+      policeStationCode: `${d.name.substring(0, 3).toUpperCase()}-${101 + i}`,
       district: d._id,
       province: d.province
     }));
@@ -59,13 +59,13 @@ const seedDB = async () => {
     //in here, I create 5 users for each role
     await User.create([
       //role 1 hq admin (full access to everything)
-      { username: 'admin', password: 'password123', fullName: 'HQ Master Admin', role: 'hq_admin' },
+      { username: 'admin', password: 'password123', fullname: 'HQ Master Admin', role: 'hq_admin' },
 
       //role 2 provincial officer
       {
         username: 'wp_officer',
         password: 'password123',
-        fullName: 'Western Province Officer',
+        fullname: 'Western Province Officer',
         role: 'provincial_officer',
         province: getProv('WP')
       },
@@ -74,7 +74,7 @@ const seedDB = async () => {
       {
         username: 'colombo_officer',
         password: 'password123',
-        fullName: 'Colombo Station Officer',
+        fullname: 'Colombo Station Officer',
         role: 'station_officer',
         station: stationData.find(s => s.name === 'Colombo Central Police Station')._id,
         province: getProv('WP'),
@@ -106,16 +106,16 @@ const seedDB = async () => {
       driversToInsert.push({
         _id: driverId,
         fullName: `${firstName} ${lastName}`,
-        nationalId: `${String(195000000 + i).padStart(9, '0')}V`,
-        licenseNumber: `B${String(1000000 + i).padStart(7, '0')}`,
-        phone: `07${String(10000000 + i).slice(-8)}`,
+        nic: `${String(195000000 + i).padStart(9, '0')}V`,
+        licenseNo: `B${String(1000000 + i).padStart(7, '0')}`,
+        contactNumber: `07${String(10000000 + i).slice(-8)}`,
         district: district._id,
         province: district.province
       });
 
       vehiclesToInsert.push({
         _id: vehicleId,
-        registrationNumber: `REG${100 + i}`,
+        registrationNo: `REG${100 + i}`,
         driver: driverId,
         district: district._id,
         province: district.province,
@@ -141,7 +141,7 @@ const seedDB = async () => {
     await User.create({
       username: 'TT-Saman',
       password: 'password123',
-      fullName: 'TT-Saman',
+      fullname: 'TT-Saman',
       role: 'tuk_tuk_operator',
     });
 
@@ -149,7 +149,7 @@ const seedDB = async () => {
     await User.create({
       username: 'gps_device',
       password: 'password123',
-      fullName: 'GPS Device',
+      fullname: 'GPS Device',
       role: 'gps_device',
       vehicle: insertedVehicles[0]._id,
       gpstracker: insertedGPSTrackers[0]._id
