@@ -4,17 +4,18 @@ import { protect, authorize } from '../middleware/auth.js';//import security mid
 
 const router = express.Router();
 
-//in here I setup the register route. Only HQ Admin can register new officers
 router.post('/register', protect, authorize('hq_admin'), register);
 
-router.put('/update/:id', protect, authorize('hq_admin'), updateUser);
+router.get('/getUsers', protect, authorize('hq_admin'), getAllUsers);
 
-router.delete('/delete/:id', protect, authorize('hq_admin'), deleteUser);
+router.get('/getUser/:username', protect, authorize('hq_admin'), getUser);
 
-//in here I setup the login route. open to everyone
+router.patch('/update/:username', protect, authorize('hq_admin'), updateUser);
+
+router.delete('/delete/:username', protect, authorize('hq_admin'), deleteUser);
+
 router.post('/login', login);
 
-//in here I setup the me route to get the logged in user's profile
 router.get('/me', protect, getMe);
 
 export default router;
