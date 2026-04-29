@@ -394,3 +394,115 @@ export const getSuspiciousVehicles = async (req, res, next) => {
     next(error);
   }
 };
+
+//get suspicious vehicles by district name
+export const getSuspiciousVehiclesByDistrict = async (req, res, next) => {
+  try {
+    const { districtName } = req.params;
+
+    //find district using name
+    const district = await District.findOne({
+      name: { $regex: `^${districtName}$`, $options: 'i' }
+    });
+
+    if (!district) {
+      return res.status(404).json({
+        success: false,
+        message: 'District not found'
+      });
+    }
+
+    //find tuk tuks in that district
+    const vehicles = await Vehicle.find({ district: district._id }).select('_id');
+
+    const vehicleIds = vehicles.map(v => v._id);
+
+    //find anomaly pings
+    const suspiciousPings = await LocationPing.find({
+      vehicle: { $in: vehicleIds },
+      isAnomaly: true
+    });
+
+    res.status(200).json({
+      success: true,
+      count: suspiciousPings.length,
+      data: suspiciousPings
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
+
+//get suspicious vehicles by province name
+export const getSuspiciousVehiclesByProvince = async (req, res, next) => {
+  try {
+    const { provinceName } = req.params;
+
+    const data = await LocationPing.aggregate([
+      { $match: { isAnomaly: true } },
+
+      //join tuktuk
+      {
+        $lookup: {
+          from: 'vehicles',
+          localField: 'vehicle',
+          foreignField: '_id',
+          as: 'vehicle'
+        }
+      },
+      { $unwind: '$vehicle' },
+
+      //join district
+      {
+        $lookup: {
+          from: 'districts',
+          localField: 'vehicle.district',
+          foreignField: '_id',
+          as: 'district'
+        }
+      },
+      { $unwind: '$district' },
+
+      //join province
+      {
+        $lookup: {
+          from: 'provinces',
+          localField: 'district.province',
+          foreignField: '_id',
+          as: 'province'
+        }
+      },
+      { $unwind: '$province' },
+
+      //filter by province name
+      {
+        $match: {
+          'province.name': {
+            $regex: `^${provinceName}$`,
+            $options: 'i'
+          }
+        }
+      },
+
+      //latest location ping per vehicle
+      { $sort: { vehicle: 1, timestamp: -1 } },
+      {
+        $group: {
+          _id: '$vehicle._id',
+          latestPing: { $first: '$$ROOT' }
+        }
+      },
+      { $replaceRoot: { newRoot: '$latestPing' } }
+    ]);
+
+    res.status(200).json({
+      success: true,
+      count: data.length,
+      data
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};

@@ -15,6 +15,7 @@ import masterRoutes from './src/routes/master.routes.js';
 import driverRoutes from './src/routes/driver.routes.js';
 import tuktukRoutes from './src/routes/tuktuk.routes.js';
 import locationRoutes from './src/routes/location.routes.js';
+import alertRoutes from './src/routes/alert.routes.js';
 
 //initialize express
 const app = express();
@@ -46,6 +47,7 @@ app.use('/api/v1/master', masterRoutes);
 app.use('/api/v1/drivers', driverRoutes);
 app.use('/api/v1/tuktuks', tuktukRoutes);
 app.use('/api/v1/locations', locationRoutes);
+app.use('/api/v1/alerts', alertRoutes)
 
 //here I setup a health check route to verify the cloud deployment is live
 app.get('/health', (req, res) => {

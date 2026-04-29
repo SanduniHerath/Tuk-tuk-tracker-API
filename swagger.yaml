@@ -1,0 +1,2261 @@
+openapi: 3.0.0
+
+info:
+  title: Tuk-Tuk Tracker API
+  version: 1.0.0
+  description: |
+    ## Real-Time Three-Wheeler (Tuk-Tuk) Tracking & Movement Logging System
+    Developed for **Sri Lanka Police** to support operational visibility and investigations.
+
+  contact:
+    name: Sri Lanka Police IT Division
+  license:
+    name: MIT
+
+servers:
+  - url: /api/v1
+    description: API Version 1
+
+#security scheme
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: |
+        Enter your JWT token obtained from POST /auth/login.
+        Format: `Bearer <token>`
+
+#these are reusable schemas
+  schemas:
+
+    #for auth section
+    LoginRequest:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          example: admin
+        password:
+          type: string
+          example: password123
+
+    TokenResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        token:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+        role:
+          type: string
+          example: hq_admin
+
+    RegisterRequest:
+      type: object
+      required:
+        - username
+        - password
+        - fullName
+        - role
+      properties:
+        username:
+          type: string
+          example: kandy_officer
+        password:
+          type: string
+          minLength: 8
+          example: Officer@1234
+        fullName:
+          type: string
+          example: Kamal Perera
+        role:
+          type: string
+          enum:
+            - hq_admin
+            - provincial_officer
+            - station_officer
+            - tuk_tuk_operator
+            - gps_device
+          example: station_officer
+        province:
+          type: string
+          description: MongoDB ObjectId — required for provincial_officer and station_officer
+          example: 64a1f2b3c4d5e6f7a8b9c0d1
+        district:
+          type: string
+          description: MongoDB ObjectId — required for station_officer
+          example: 64a1f2b3c4d5e6f7a8b9c0d2
+        vehicle:
+          type: string
+          description: MongoDB ObjectId — required for gps_device role
+          example: 64a1f2b3c4d5e6f7a8b9c0d3
+
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d9
+        username:
+          type: string
+          example: colombo_officer
+        fullName:
+          type: string
+          example: Samantha Fernando
+        role:
+          type: string
+          example: station_officer
+        province:
+          type: object
+          properties:
+            _id:
+              type: string
+              example: 64a1f2b3c4d5e6f7a8b9c0d1
+            name:
+              type: string
+              example: Western
+        district:
+          type: object
+          properties:
+            _id:
+              type: string
+              example: 64a1f2b3c4d5e6f7a8b9c0d2
+            name:
+              type: string
+              example: Colombo
+        station:
+          type: object
+          properties:
+            _id:
+              type: string
+              example: 64a1f2b3c4d5e6f7a8b9c0d3
+            name:
+              type: string
+              example: Colombo Central Police Station
+        vehicle:
+          type: object
+          properties:
+            _id:
+              type: string
+              example: 64a1f2b3c4d5e6f7a8b9c0d3
+            plateNumber:
+              type: string
+              example: ABC-1234
+            imei:
+              type: string
+              example: 359678067887432
+
+    UpdateUserRequest:
+      type: object
+      properties:
+        fullName: { type: string }
+        password: { type: string, minLength: 8 }
+        role: { type: string }
+        province: { type: string }
+        district: { type: string }
+
+
+    #for province section
+    Province:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d1
+        name:
+          type: string
+          example: Western
+        code:
+          type: string
+          example: WP
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    UpdateProvinceRequest:
+      type: object
+      properties:
+        name: { type: string }
+        code: { type: string }
+
+    #for district section
+    District:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d2
+        name:
+          type: string
+          example: Colombo
+        province:
+          $ref: '#/components/schemas/Province'
+        createdAt:
+          type: string
+          format: date-time
+
+    UpdateDistrictRequest:
+      type: object
+      properties:
+        name: { type: string }
+        province: { type: string }
+        code: { type: string }
+
+    #for station section
+    Station:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d3
+        name:
+          type: string
+          example: Colombo Central Police Station
+        stationCode:
+          type: string
+          example: COL-101
+        district:
+          $ref: '#/components/schemas/District'
+        province:
+          $ref: '#/components/schemas/Province'
+        address:
+          type: string
+          example: Colombo Fort, Colombo 01
+        contactNumber:
+          type: string
+          example: 011-2222222
+
+    CreateStationRequest:
+      type: object
+      required:
+        - name
+        - stationCode
+        - district
+        - province
+      properties:
+        name:
+          type: string
+          example: Negombo Police Station
+        stationCode:
+          type: string
+          example: NEG-102
+        district:
+          type: string
+          example: Gampaha
+        province:
+          type: string
+          example: Western
+        address:
+          type: string
+          example: Main Street, Negombo
+        contactNumber:
+          type: string
+          example: 031-2222222
+    
+    UpdateStationRequest:
+      type: object
+      properties:
+        name: { type: string }
+        stationCode: { type: string }
+        district: { type: string }
+        province: { type: string }
+        address: { type: string }
+        contactNumber: { type: string }
+
+    #for driver section
+    Driver:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d4
+        fullName:
+          type: string
+          example: Kasun Perera
+        nationalId:
+          type: string
+          example: 195000001V
+        licenseNumber:
+          type: string
+          example: B1000001
+        phone:
+          type: string
+          example: "0771234567"
+        district:
+          $ref: '#/components/schemas/District'
+        province:
+          $ref: '#/components/schemas/Province'
+        isActive:
+          type: boolean
+          example: true
+        createdAt:
+          type: string
+          format: date-time
+
+    CreateDriverRequest:
+      type: object
+      required:
+        - fullName
+        - nationalId
+        - licenseNumber
+        - district
+        - province
+      properties:
+        fullName:
+          type: string
+          example: Nimal Silva
+        nationalId:
+          type: string
+          example: 199512345678V
+        licenseNumber:
+          type: string
+          example: B1234567
+        phone:
+          type: string
+          example: "0771234567"
+        district:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d2
+        province:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d1
+
+    UpdateDriverRequest:
+      type: object
+      properties:
+        fullName:
+          type: string
+          example: Nimal Silva Updated
+        phone:
+          type: string
+          example: "0779999999"
+        isActive:
+          type: boolean
+          example: false
+
+    #for tuk tuk section
+    Vehicle:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d5
+        registrationNumber:
+          type: string
+          example: REG101
+        driver:
+          $ref: '#/components/schemas/Driver'
+        district:
+          $ref: '#/components/schemas/District'
+        province:
+          $ref: '#/components/schemas/Province'
+        deviceId:
+          type: string
+          example: DEV-10001
+        color:
+          type: string
+          example: Yellow
+        year:
+          type: integer
+          example: 2019
+        status:
+          type: string
+          enum:
+            - active
+            - inactive
+            - flagged
+          example: active
+        isActive:
+          type: boolean
+          example: true
+        createdAt:
+          type: string
+          format: date-time
+
+    CreateVehicleRequest:
+      type: object
+      required:
+        - registrationNumber
+        - district
+        - province
+      properties:
+        registrationNumber:
+          type: string
+          example: WP-CAB-9999
+        driver:
+          type: string
+          description: MongoDB ObjectId of an existing driver
+          example: 64a1f2b3c4d5e6f7a8b9c0d4
+        district:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d2
+        province:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d1
+        deviceId:
+          type: string
+          example: DEV-09999
+        color:
+          type: string
+          example: Yellow
+        year:
+          type: integer
+          example: 2019
+
+    UpdateVehicleRequest:
+      type: object
+      properties:
+        color:
+          type: string
+          example: Blue
+        year:
+          type: integer
+          example: 2020
+        driver:
+          type: string
+          description: Reassign to a different driver
+          example: 64a1f2b3c4d5e6f7a8b9c0d4
+        status:
+          type: string
+          enum:
+            - active
+            - inactive
+            - flagged
+          example: flagged
+
+    #for location ping section
+    LocationPing:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 64a1f2b3c4d5e6f7a8b9c0d6
+        vehicle:
+          type: string
+          description: MongoDB ObjectId of the vehicle
+          example: 64a1f2b3c4d5e6f7a8b9c0d5
+        latitude:
+          type: number
+          format: float
+          example: 6.9271
+        longitude:
+          type: number
+          format: float
+          example: 79.8612
+        speed:
+          type: number
+          example: 42
+        heading:
+          type: number
+          description: Direction in degrees 0-360
+          example: 180
+        accuracy:
+          type: number
+          description: GPS accuracy in metres
+          example: 5.2
+        timestamp:
+          type: string
+          format: date-time
+          example: "2025-04-24T10:23:00.000Z"
+        isAnomaly:
+          type: boolean
+          description: True when this ping was flagged as suspicious by the pattern engine
+          example: false
+        anomaly:
+          type: string
+          nullable: true
+          description: The specific anomaly pattern detected
+          enum:
+            - NIGHT_MOVEMENT
+            - SPEEDING
+            - BOUNDARY_CROSS
+            - STATIONARY
+            - ERRATIC
+          example: null
+
+    PingRequest:
+      type: object
+      required:
+        - latitude
+        - longitude
+      properties:
+        vehicleId:
+          type: string
+          description: |
+            Required ONLY when called by hq_admin for simulation/testing.
+            gps_device role auto-identifies from JWT token — do not send this.
+          example: 64a1f2b3c4d5e6f7a8b9c0d5
+        latitude:
+          type: number
+          minimum: -90
+          maximum: 90
+          example: 6.9271
+        longitude:
+          type: number
+          minimum: -180
+          maximum: 180
+          example: 79.8612
+        speed:
+          type: number
+          description: Speed in km/h
+          example: 42
+        heading:
+          type: number
+          description: Direction in degrees (0=North, 90=East, 180=South, 270=West)
+          example: 180
+        accuracy:
+          type: number
+          description: GPS accuracy in metres (lower = more accurate)
+          example: 5.2
+
+    #for suspicious tuktuk section
+    SuspiciousVehicle:
+      type: object
+      description: |
+        A vehicle that has triggered one or more anomaly patterns.
+        Returned by the GET /alerts/suspicious endpoint.
+        Sorted by severityScore descending — most suspicious first.
+      properties:
+        vehicleId:
+          type: string
+          description: MongoDB ObjectId of the vehicle
+          example: 64a1f2b3c4d5e6f7a8b9c0d5
+        registrationNumber:
+          type: string
+          description: Human-readable vehicle registration
+          example: REG101
+        vehicleStatus:
+          type: string
+          description: Current operational status of the vehicle
+          enum:
+            - active
+            - inactive
+            - flagged
+          example: active
+        vehicleColor:
+          type: string
+          example: Yellow
+        assignedDistrict:
+          type: string
+          description: Name of the district this vehicle is registered to
+          example: Colombo
+        latestAnomalyType:
+          type: string
+          description: The most recently detected anomaly type for this vehicle
+          enum:
+            - NIGHT_MOVEMENT
+            - SPEEDING
+            - BOUNDARY_CROSS
+            - STATIONARY
+            - ERRATIC
+          example: SPEEDING
+        anomalyTypes:
+          type: array
+          description: All unique anomaly types this vehicle has triggered
+          items:
+            type: string
+          example:
+            - SPEEDING
+            - NIGHT_MOVEMENT
+        totalAnomalyCount:
+          type: integer
+          description: Total number of anomalous pings recorded for this vehicle
+          example: 24
+        severityScore:
+          type: integer
+          description: |
+            Number of distinct anomaly types triggered.
+            Higher score = more suspicious = appears higher in results.
+            Score of 1 = one pattern type, Score of 3 = three different patterns.
+          example: 2
+        lastSeenAt:
+          type: string
+          format: date-time
+          description: Timestamp of the most recent anomalous ping
+          example: "2025-04-24T10:23:00.000Z"
+        lastKnownLocation:
+          type: object
+          description: GPS coordinates at the time of the most recent anomaly
+          properties:
+            latitude:
+              type: number
+              example: 6.9271
+            longitude:
+              type: number
+              example: 79.8612
+        lastSpeed:
+          type: number
+          description: Speed recorded at the most recent anomalous ping
+          example: 95
+
+    AlertSummary:
+      type: object
+      description: Count of vehicles that triggered each anomaly type
+      properties:
+        NIGHT_MOVEMENT:
+          type: integer
+          description: Vehicles detected operating between midnight and 5am
+          example: 8
+        SPEEDING:
+          type: integer
+          description: Vehicles detected exceeding 80 km/h
+          example: 8
+        BOUNDARY_CROSS:
+          type: integer
+          description: Vehicles detected outside their assigned district
+          example: 8
+        STATIONARY:
+          type: integer
+          description: Vehicles detected stopped in one location too long
+          example: 8
+        ERRATIC:
+          type: integer
+          description: Vehicles detected with irregular zigzag movement
+          example: 8
+
+    AlertsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        totalSuspiciousVehicles:
+          type: integer
+          description: Total number of vehicles with at least one anomaly
+          example: 40
+        anomalySummary:
+          $ref: '#/components/schemas/AlertSummary'
+        filters:
+          type: object
+          description: The filters that were applied to this response
+          properties:
+            type:
+              type: string
+              description: Anomaly type filter applied (or "all" if none)
+              example: all
+            since:
+              type: string
+              description: Time filter applied (or "all time" if none)
+              example: all time
+            scope:
+              type: string
+              description: The role of the user who made the request
+              example: hq_admin
+        data:
+          type: array
+          description: Suspicious vehicles sorted by severity score descending
+          items:
+            $ref: '#/components/schemas/SuspiciousVehicle'
+
+    #these are the common responses
+    SuccessResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        message:
+          type: string
+          example: Operation successful
+
+    ErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: false
+        message:
+          type: string
+          example: Description of what went wrong
+
+    PaginatedVehicles:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        results:
+          type: integer
+          description: Number of vehicles returned in this response
+          example: 20
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Vehicle'
+
+    PaginatedDrivers:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        results:
+          type: integer
+          example: 10
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Driver'
+
+    PaginatedLocations:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        results:
+          type: integer
+          example: 5
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocationPing'
+
+  #these are reusable params
+  parameters:
+    pageParam:
+      in: query
+      name: page
+      schema:
+        type: integer
+        default: 1
+        minimum: 1
+      description: Page number for pagination
+      example: 1
+
+    limitParam:
+      in: query
+      name: limit
+      schema:
+        type: integer
+        default: 10
+        minimum: 1
+        maximum: 100
+      description: Number of results per page
+      example: 10
+
+    sortParam:
+      in: query
+      name: sort
+      schema:
+        type: string
+      description: |
+        Field to sort by. Prefix with `-` for descending order.
+        Examples: `sort=fullName` (A-Z), `sort=-createdAt` (newest first)
+      example: -createdAt
+
+    fieldsParam:
+      in: query
+      name: fields
+      schema:
+        type: string
+      description: |
+        Comma-separated list of fields to include in response.
+        Example: `fields=registrationNumber,status,district`
+      example: registrationNumber,status,district
+
+  #these are reusable reponses
+  responses:
+    Unauthorized:
+      description: No token provided or token is invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            success: false
+            message: Access denied. Please log in to continue.
+
+    Forbidden:
+      description: Token valid but role does not have permission
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            success: false
+            message: Your role 'station_officer' does not have permission to perform this action.
+
+    NotFound:
+      description: The requested resource does not exist
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            success: false
+            message: Resource not found.
+
+    Conflict:
+      description: Duplicate value — resource already exists
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            success: false
+            message: Duplicate value for 'registrationNumber'. Please use a unique value.
+
+    ValidationError:
+      description: Required fields missing or invalid values
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            success: false
+            message: Validation failed — registrationNumber is required.
+
+#global security
+security:
+  - bearerAuth: []
+
+#tags for each section
+tags:
+  - name: Authentication
+    description: Login and view your own profile
+  - name: User Management
+    description: |
+       Register users, update users, and delete users
+  - name: Vehicles
+    description: |
+      Tuk-tuk vehicle management.
+      Supports **filtering** by status/district/province,
+      **sorting** by any field, **field limiting**, and **pagination**.
+  - name: Drivers
+    description: |
+      Driver management for tuk-tuk operators.
+      Supports **filtering**, **sorting**, and **pagination**.
+  - name: Tracking
+    description: |
+      Core GPS tracking system. Live view of a tuk tuk, Movement log of a tuk tuk, and a view of all tuk tuks in a district.
+  - name: Alerts
+    description: |
+      Suspicious vehicle detection and anomaly reporting system.
+      Detects 5 pattern types from live GPS data: night movement, speeding, boundary cross, stationary, and erratic movement.
+      
+  - name: Master Data Management
+    description: Administrative control of provinces, districts, and police stations
+
+#paths for each section
+paths:
+
+ #health check
+  /health:
+    get:
+      summary: Health check — verify server is running
+      description: Public endpoint. No authentication required.
+      operationId: healthCheck
+      security: []
+      tags:
+        - Authentication
+      responses:
+        '200':
+          description: Server is running
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  status:
+                    type: string
+                    example: UP
+                  timestamp:
+                    type: string
+                    format: date-time
+
+ #authentication 
+  /auth/login:
+    post:
+      summary: Login and receive JWT token
+      description: |
+        Public endpoint — no token needed.
+      operationId: login
+      security: []
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+            examples:
+              hq_admin:
+                summary: Login as HQ Admin (full access)
+                value:
+                  username: admin
+                  password: password123
+              provincial_officer:
+                summary: Login as Western Province Officer
+                value:
+                  username: wp_officer
+                  password: password123
+              station_officer:
+                summary: Login as Colombo Station Officer
+                value:
+                  username: colombo_officer
+                  password: password123
+              tuk_tuk_operator:
+                summary: Login as Tuk-Tuk Operator
+                value:
+                  username: TT-Saman
+                  password: password123
+              gps_device:
+                summary: Login as GPS Device
+                value:
+                  username: gps_device
+                  password: password123
+      responses:
+        '200':
+          description: Login successful — copy the token value
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          description: Wrong username or password
+          content:
+            application/json:
+              example:
+                success: false
+                message: Invalid credentials
+
+  /auth/register:
+    post:
+      summary: Register a new system user (hq_admin only)
+      description: |
+        Creates a new user account for a police officer or device.
+        Only hq_admin can call this endpoint.
+
+      operationId: register
+      tags:
+        - User Management
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+            examples:
+              provincial_officer:
+                summary: Create a Provincial Officer
+                value:
+                  username: kandy_officer
+                  password: Officer@1234
+                  fullName: Kamal Perera
+                  role: provincial_officer
+                  province: 64a1f2b3c4d5e6f7a8b9c0d1
+              station_officer:
+                summary: Create a Station Officer
+                value:
+                  username: galle_station
+                  password: Station@1234
+                  fullName: Samantha Fernando
+                  role: station_officer
+                  province: 64a1f2b3c4d5e6f7a8b9c0d1
+                  district: 64a1f2b3c4d5e6f7a8b9c0d2
+      responses:
+        '201':
+          description: User created successfully
+          content:
+            application/json:
+              example:
+                success: true
+                data:
+                  id: 64a1f2b3c4d5e6f7a8b9c0d9
+                  username: kandy_officer
+                  role: provincial_officer
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '409':
+          $ref: '#/components/responses/Conflict'
+
+  /auth/getUsers:
+    get:
+      summary: Get all users (hq_admin only)
+      description: Returns all users in the system.
+      tags:
+        - User Management
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successfully retrieved all users
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/User'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+  /auth/getUser/{username}:
+    get:
+      summary: Get a user by username (hq_admin only)
+      description: Returns a single user by their username.
+      tags:
+        - User Management
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          example: colombo_officer
+      responses:
+        '200':
+          description: Successfully retrieved user
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    $ref: '#/components/schemas/User'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  
+  /auth/update/{username}:
+    patch:
+      summary: Update a user (hq_admin only)
+      description: Only hq_admin can update users.
+      tags:
+        - User Management
+      security:
+        - bearerAuth: []
+
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          example: colombo_officer
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateUserRequest'
+            example:
+              fullName: Updated Name
+              password: NewPassword@123
+              role: provincial_officer
+              province: Western
+              district: Colombo
+      responses:
+        '200':
+          description: User updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: object
+
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      summary: Delete a user (hq_admin only)
+      description: Only hq_admin can delete users.
+      tags:
+        - User Management
+      security:
+        - bearerAuth: []
+
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          example: colombo_officer
+
+      responses:
+        '204':
+          description: User deleted successfully (no content)
+
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /auth/current-user:
+    get:
+      summary: Get your own profile
+      description: Returns the profile of the currently authenticated user based on their JWT token.
+      operationId: getMe
+      tags:
+        - Authentication
+      responses:
+        '200':
+          description: Your profile data
+          content:
+            application/json:
+              example:
+                success: true
+                data:
+                  _id: 64a1f2b3c4d5e6f7a8b9c0d9
+                  username: admin
+                  fullName: HQ Master Admin
+                  role: hq_admin
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  #tuk tuks management
+  /tuktuks:
+    get:
+      summary: Get all vehicles
+      description: |
+        Returns a list of vehicles with full support for: filtering, sorting, field limiting, and pagination
+
+      operationId: getVehicles
+      tags:
+        - Vehicles
+      parameters:
+        - in: query
+          name: status
+          schema:
+            type: string
+            enum:
+              - active
+              - inactive
+              - flagged
+          description: Filter by vehicle status
+          example: active
+        - in: query
+          name: district
+          schema:
+            type: string
+          description: Filter by district name
+          example: Galle
+        - in: query
+          name: province
+          schema:
+            type: string
+          description: Filter by province name
+          example: Southern
+        - in: query
+          name: color
+          schema:
+            type: string
+          description: Filter by vehicle color
+          example: Yellow
+        - $ref: '#/components/parameters/sortParam'
+        - $ref: '#/components/parameters/fieldsParam'
+        - $ref: '#/components/parameters/pageParam'
+        - $ref: '#/components/parameters/limitParam'
+      responses:
+        '200':
+          description: List of vehicles matching the filters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedVehicles'
+              examples:
+                all_active:
+                  summary: All active vehicles (page 1)
+                  value:
+                    success: true
+                    results: 20
+                    data:
+                      - _id: 64a1f2b3c4d5e6f7a8b9c0d5
+                        registrationNumber: REG101
+                        status: active
+                        color: Yellow
+                        district:
+                          name: Colombo
+                        province:
+                          name: Western
+                flagged_only:
+                  summary: Flagged vehicles only
+                  value:
+                    success: true
+                    results: 13
+                    data:
+                      - registrationNumber: REG115
+                        status: flagged
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+    post:
+      summary: Register a new tuk-tuk vehicle
+      description: |
+        Creates a new vehicle record in the system.
+        Links to an existing driver via `driver` field (MongoDB ObjectId).
+
+        **Allowed roles:** `hq_admin`, `tuk_tuk_operator`
+      operationId: createVehicle
+      tags:
+        - Vehicles
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateVehicleRequest'
+            example:
+              registrationNumber: REG301
+              driver: 19627845V
+              district: Galle
+              province: Western
+              deviceId: DEV-09999
+              color: Yellow
+              year: 2019
+      responses:
+        '201':
+          description: Vehicle created successfully
+          content:
+            application/json:
+              example:
+                success: true
+                data:
+                  _id: 64a1f2b3c4d5e6f7a8b9c0d5
+                  registrationNumber: REG301
+                  status: active
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '409':
+          $ref: '#/components/responses/Conflict'
+
+
+  /tuktuks/{registrationNumber}:
+    get:
+      summary: Get a single vehicle by ID
+      operationId: getVehicle
+      tags:
+        - Vehicles
+      parameters:
+        - in: path
+          name: registrationNumber
+          required: true
+          schema:
+            type: string
+          example: REG101
+      responses:
+        '200':
+          description: Vehicle details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    $ref: '#/components/schemas/Vehicle'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    patch:
+      summary: Update vehicle details
+      description: |
+        **Allowed roles:** `hq_admin`, `station_officer`
+      operationId: updateVehicle
+      tags:
+        - Vehicles
+      parameters:
+        - in: path
+          name: registrationNumber
+          required: true
+          schema:
+            type: string
+          example: REG101
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateVehicleRequest'
+            examples:
+              flag_vehicle:
+                summary: Flag a suspicious vehicle
+                value:
+                  status: flagged
+              reassign_driver:
+                summary: Reassign to a different driver
+                value:
+                  driver: 19627845V
+              update_details:
+                summary: Update color and year
+                value:
+                  color: Blue
+                  year: 2021
+      responses:
+        '200':
+          description: Vehicle updated
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      summary: Delete a vehicle permanently (hq_admin only)
+      description: |
+        Only hq_admin can delete a vehicle.
+      operationId: deleteVehicle
+      tags:
+        - Vehicles
+      parameters:
+        - in: path
+          name: registrationNumber
+          required: true
+          schema:
+            type: string
+          example: REG101
+      responses:
+        '204':
+          description: Vehicle deleted — no content returned
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  #drivers management
+  /drivers:
+    get:
+      summary: Get all drivers
+      description: |
+        **Allowed roles:** `hq_admin`, `provincial_officer`, `station_officer`
+      operationId: getDrivers
+      tags:
+        - Drivers
+      parameters:
+        - in: query
+          name: isActive
+          schema:
+            type: boolean
+          example: true
+        - in: query
+          name: district
+          description: Filter by district name
+          example: Galle
+          schema:
+            type: string
+        - in: query
+          name: province
+          description: Filter by province name
+          example: Southern
+          schema:
+            type: string
+        - $ref: '#/components/parameters/sortParam'
+        - $ref: '#/components/parameters/pageParam'
+        - $ref: '#/components/parameters/limitParam'
+        - $ref: '#/components/parameters/fieldsParam'
+      responses:
+        '200':
+          description: List of drivers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDrivers'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+    post:
+      summary: Register a new driver
+      description: |
+        **Allowed roles:** `hq_admin only`
+      operationId: createDriver
+      tags:
+        - Drivers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateDriverRequest'
+            example:
+              fullName: Nimal Silva
+              nationalId: 199512345678V
+              licenseNumber: B1234567
+              phone: "0771234567"
+              district: Galle
+              province: Southern
+      responses:
+        '201':
+          description: Driver created
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '409':
+          $ref: '#/components/responses/Conflict'
+
+  /drivers/{nationalId}:
+    get:
+      summary: Get a single driver by ID
+      operationId: getDriver
+      tags:
+        - Drivers
+      parameters:
+        - in: path
+          name: nationalId
+          required: true
+          schema:
+            type: string
+          example: 199512345678V
+      responses:
+        '200':
+          description: Driver details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    $ref: '#/components/schemas/Driver'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    patch:
+      summary: Update a driver's details
+      description: |
+        **Allowed roles:** `hq_admin`, `station_officer`
+      operationId: updateDriver
+      tags:
+        - Drivers
+      parameters:
+        - in: path
+          name: nationalId
+          required: true
+          schema:
+            type: string
+          example: 199512345678V
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateDriverRequest'
+            examples:
+              update_phone:
+                summary: Update phone number
+                value:
+                  phone: "0779999999"
+              deactivate:
+                summary: Deactivate a driver
+                value:
+                  isActive: false
+      responses:
+        '200':
+          description: Driver updated
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      summary: Delete a driver permanently
+      description: |
+        Only hq_admin can delete a driver permanently
+      operationId: deleteDriver
+      tags:
+        - Drivers
+      parameters:
+        - in: path
+          name: nationalId
+          required: true
+          schema:
+            type: string
+          example: 199512345678V
+      responses:
+        '204':
+          description: Driver deleted — no content returned
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  #tuk tuk tracking section
+  /locations/ping:
+    post:
+      summary: Submit a GPS location ping
+      description: |
+        **GPS Device mode**
+        **Allowed roles:** `gps_device`
+      operationId: submitPing
+      tags:
+        - Tracking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PingRequest'
+            examples:
+              admin_simulation:
+                summary: Admin submitting ping for any vehicle
+                value:
+                  vehicleId: 64a1f2b3c4d5e6f7a8b9c0d5
+                  latitude: 6.9271
+                  longitude: 79.8612
+                  speed: 42
+                  heading: 180
+                  accuracy: 5.2
+              device_mode:
+                summary: GPS device ping (no vehicleId needed)
+                value:
+                  latitude: 7.2906
+                  longitude: 80.6337
+                  speed: 35
+                  heading: 90
+                  accuracy: 3.1
+      responses:
+        '201':
+          description: Ping saved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    $ref: '#/components/schemas/LocationPing'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+  /locations/latest:
+    get:
+      summary: Get latest location of all vehicles
+      description: |
+        Returns the most recent GPS ping for every vehicle.
+
+        **Allowed roles:** `hq_admin`, `provincial_officer`, `station_officer`
+      operationId: getAllLatestLocations
+      tags:
+        - Tracking
+      parameters:
+        - $ref: '#/components/parameters/pageParam'
+        - $ref: '#/components/parameters/limitParam'
+      responses:
+        '200':
+          description: Latest ping per vehicle
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedLocations'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+  /locations/district/{districtName}:
+    get:
+      summary: Get latest location of ALL vehicles in a district
+      description: |
+        Returns the most recent GPS ping for every vehicle in the district.
+        **Allowed roles:** `hq_admin`, `provincial_officer`, `station_officer`
+      operationId: getDistrictLatest
+      tags:
+        - Tracking
+      parameters:
+        - in: path
+          name: districtName
+          required: true
+          schema:
+            type: string
+          example: Colombo
+      responses:
+        '200':
+          description: Latest ping per vehicle in district
+          content:
+            application/json:
+              example:
+                success: true
+                count: 45
+                data:
+                  - vehicle: 64a1f2b3c4d5e6f7a8b9c0d5
+                    latitude: 6.9271
+                    longitude: 79.8612
+                    speed: 42
+                    timestamp: "2025-04-24T10:23:00.000Z"
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+  /locations/{regNo}/latest:
+    get:
+      summary: Live view — latest location of a specific vehicle
+      description: |
+        Returns the single most recent GPS ping.
+        Data is never more than 10 seconds old while simulate.js is running.
+      operationId: getLatestLocation
+      tags:
+        - Tracking
+      parameters:
+        - in: path
+          name: regNo
+          required: true
+          schema:
+            type: string
+          example: REG101
+      responses:
+        '200':
+          description: Most recent location ping
+          content:
+            application/json:
+              example:
+                success: true
+                data:
+                  vehicle:
+                    _id: 64a1f2b3c4d5e6f7a8b9c0d5
+                    registrationNumber: REG101
+                  latitude: 6.9271
+                  longitude: 79.8612
+                  speed: 42
+                  timestamp: "2025-04-24T10:23:00.000Z"
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          description: No location data found for this vehicle
+
+  /locations/{regNo}/history:
+    get:
+      summary: Movement log — GPS history within a time window
+      description: |
+        Returns all pings between optional `from` and `to` timestamps.
+        Sorted newest first.
+      operationId: getHistory
+      tags:
+        - Tracking
+      parameters:
+        - in: path
+          name: regNo
+          required: true
+          schema:
+            type: string
+          example: REG101
+        - in: query
+          name: from
+          schema:
+            type: string
+            format: date-time
+          example: "2025-04-18T00:00:00Z"
+        - in: query
+          name: to
+          schema:
+            type: string
+            format: date-time
+          example: "2025-04-24T23:59:59Z"
+      responses:
+        '200':
+          description: Array of location pings in time window
+          content:
+            application/json:
+              example:
+                success: true
+                results: 42
+                data:
+                  - latitude: 6.9271
+                    longitude: 79.8612
+                    speed: 42
+                    timestamp: "2025-04-24T10:23:00.000Z"
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  #suspicious tuk tuk detection
+  /alerts/suspicious:
+    get:
+      summary: Get all suspicious vehicles with anomaly patterns
+      description: |
+        Returns vehicles that have triggered anomaly flags from the
+        pattern detection engine.
+      operationId: getSuspiciousVehicles
+      tags:
+        - Alerts
+      parameters:
+        - in: query
+          name: type
+          schema:
+            type: string
+            enum:
+              - NIGHT_MOVEMENT
+              - SPEEDING
+              - BOUNDARY_CROSS
+              - STATIONARY
+              - ERRATIC
+          description: Filter by specific anomaly type
+          example: SPEEDING
+        - in: query
+          name: since
+          schema:
+            type: string
+            format: date-time
+          description: |
+            Only return anomalies detected after this timestamp.
+          example: "2025-04-20T00:00:00Z"
+      responses:
+        '200':
+          description: Suspicious vehicles grouped and sorted by severity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlertsResponse'
+              examples:
+                all_suspicious:
+                  summary: All suspicious vehicles (no filter)
+                  value:
+                    success: true
+                    totalSuspiciousVehicles: 40
+                    anomalySummary:
+                      NIGHT_MOVEMENT: 8
+                      SPEEDING: 8
+                      BOUNDARY_CROSS: 8
+                      STATIONARY: 8
+                      ERRATIC: 8
+                    filters:
+                      type: all
+                      since: all time
+                      scope: hq_admin
+                    data:
+                      - vehicleId: 64a1f2b3c4d5e6f7a8b9c0d5
+                        registrationNumber: REG101
+                        vehicleStatus: active
+                        vehicleColor: Yellow
+                        assignedDistrict: Colombo
+                        latestAnomalyType: SPEEDING
+                        anomalyTypes:
+                          - SPEEDING
+                          - NIGHT_MOVEMENT
+                        totalAnomalyCount: 24
+                        severityScore: 2
+                        lastSeenAt: "2025-04-24T10:23:00.000Z"
+                        lastKnownLocation:
+                          latitude: 6.9271
+                          longitude: 79.8612
+                        lastSpeed: 95
+                      - vehicleId: 64a1f2b3c4d5e6f7a8b9c0d6
+                        registrationNumber: REG116
+                        vehicleStatus: active
+                        vehicleColor: Blue
+                        assignedDistrict: Kandy
+                        latestAnomalyType: BOUNDARY_CROSS
+                        anomalyTypes:
+                          - BOUNDARY_CROSS
+                        totalAnomalyCount: 11
+                        severityScore: 1
+                        lastSeenAt: "2025-04-24T09:15:00.000Z"
+                        lastKnownLocation:
+                          latitude: 7.8500
+                          longitude: 81.1200
+                        lastSpeed: 32
+                speeding_only:
+                  summary: Only speeding vehicles
+                  value:
+                    success: true
+                    totalSuspiciousVehicles: 8
+                    anomalySummary:
+                      NIGHT_MOVEMENT: 0
+                      SPEEDING: 8
+                      BOUNDARY_CROSS: 0
+                      STATIONARY: 0
+                      ERRATIC: 0
+                    filters:
+                      type: SPEEDING
+                      since: all time
+                      scope: hq_admin
+                    data:
+                      - registrationNumber: REG102
+                        latestAnomalyType: SPEEDING
+                        anomalyTypes:
+                          - SPEEDING
+                        totalAnomalyCount: 18
+                        severityScore: 1
+                        lastSpeed: 112
+        '400':
+          description: Invalid anomaly type provided in ?type parameter
+          content:
+            application/json:
+              example:
+                success: false
+                message: "Invalid anomaly type. Valid types: NIGHT_MOVEMENT, SPEEDING, BOUNDARY_CROSS, STATIONARY, ERRATIC"
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+  /alerts/suspicious/{districtName}:
+    get:
+      summary: Get all suspicious vehicles in a district
+      description: |
+        Returns vehicles that have triggered anomaly flags from the
+        pattern detection engine.
+      operationId: getSuspiciousVehiclesByDistrict
+      tags:
+        - Alerts
+      parameters:
+        - in: path
+          name: districtName
+          required: true
+          schema:
+            type: string
+          example: Colombo
+      responses:
+        '200':
+          description: Suspicious vehicles in district
+          content:
+            application/json:
+              example:
+                success: true
+                data:
+                  - vehicleId: 64a1f2b3c4d5e6f7a8b9c0d5
+                    registrationNumber: REG101
+                    vehicleStatus: active
+                    vehicleColor: Yellow
+                    assignedDistrict: Colombo
+                    latestAnomalyType: SPEEDING
+                    anomalyTypes:
+                      - SPEEDING
+                      - NIGHT_MOVEMENT
+                    totalAnomalyCount: 24
+                    severityScore: 2
+                    lastSeenAt: "2025-04-24T10:23:00.000Z"
+                    lastKnownLocation:
+                      latitude: 6.9271
+                      longitude: 79.8612
+                    lastSpeed: 95
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+  /alerts/suspicious/{provinceName}:
+    get:
+      summary: Get all suspicious vehicles in a province
+      description: |
+        Returns vehicles that have triggered anomaly flags from the
+        pattern detection engine.
+      operationId: getSuspiciousVehiclesByProvince
+      tags:
+        - Alerts
+      parameters:
+        - in: path
+          name: provinceName
+          required: true
+          schema:
+            type: string
+          example: Western
+      responses:
+        '200':
+          description: Suspicious vehicles in province
+          content:
+            application/json:
+              example:
+                success: true
+                data:
+                  - vehicleId: 64a1f2b3c4d5e6f7a8b9c0d5
+                    registrationNumber: REG101
+                    vehicleStatus: active
+                    vehicleColor: Yellow
+                    assignedProvince: Western
+                    latestAnomalyType: SPEEDING
+                    anomalyTypes:
+                      - SPEEDING
+                      - NIGHT_MOVEMENT
+                    totalAnomalyCount: 24
+                    severityScore: 2
+                    lastSeenAt: "2025-04-24T10:23:00.000Z"
+                    lastKnownLocation:
+                      latitude: 6.9271
+                      longitude: 79.8612
+                    lastSpeed: 95
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+  #master data management
+  /master/provinces:
+    get:
+      summary: Get all 9 provinces
+      operationId: getProvinces
+      tags:
+        - Master Data Management
+      responses:
+        '200':
+          description: All provinces
+          content:
+            application/json:
+              example:
+                success: true
+                results: 9
+                data:
+                  - name: Western
+                    code: WP
+                  - name: Central
+                    code: CP
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /master/provinces/{name}:
+    get:
+      summary: Get a province by name
+      operationId: getProvince
+      tags:
+        - Master Data Management
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          example: Western
+      responses:
+        '200':
+          description: Province found
+        '404':
+          description: Province not found
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+    patch:
+      summary: Update a province (hq_admin and province officer only)
+      operationId: updateProvince
+      tags:
+        - Master Data Management
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          example: Western
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateProvinceRequest'
+            example:
+              name: Western
+              code: WP
+      responses:
+        '200':
+          description: Province updated
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    
+    delete:
+      summary: Delete a province (hq_admin only)
+      description: |
+        Only hq_admin can delete a province.
+      operationId: deleteProvince
+      tags:
+        - Master Data Management
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          example: Western
+      responses:
+        '200':
+          description: Province deleted
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /master/districts:
+    get:
+      summary: Get all 25 districts (hq_admin, province officer, station_officer only)
+      description: Filter by province name to get districts in one province.
+      operationId: getDistricts
+      tags:
+        - Master Data Management
+      parameters:
+        - in: query
+          name: province
+          schema:
+            type: string
+          example: Western
+      responses:
+        '200':
+          description: List of districts
+          content:
+            application/json:
+              example:
+                success: true
+                results: 3
+                data:
+                  - name: Colombo
+                    province:
+                      name: Western
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /master/districts/{name}:
+    get:
+      summary: Get a district by name (hq_admin, province officer, station_officer only)
+      operationId: getDistrict
+      tags:
+        - Master Data Management
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          example: Colombo
+      responses:
+        '200':
+          description: District found
+        '404':
+          description: District not found
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    
+    patch:
+      summary: Update a district (hq_admin only)
+      operationId: updateDistrict
+      tags:
+        - Master Data Management
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          example: Colombo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateDistrictRequest'
+            example:
+              name: Colombo
+              province: Western
+              code: COL
+      responses:
+        '200':
+          description: District updated
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      summary: Delete a district (hq_admin only)
+      description: |
+        Only hq_admin can delete a district.
+      operationId: deleteDistrict
+      tags:
+        - Master Data Management
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          example: Colombo
+      responses:
+        '200':
+          description: District deleted
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /master/stations:
+    post:
+      summary: Create a new police station (hq_admin and station_officer only)
+      operationId: createStation
+      tags:
+        - Master Data Management
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateStationRequest'
+      responses:
+        '201':
+          description: Station created
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+    get:
+      summary: Get all police stations
+      description: Filter by province name or district name.
+      operationId: getStations
+      tags:
+        - Master Data Management
+      parameters:
+        - in: query
+          name: district
+          schema:
+            type: string
+          example: Colombo
+        - in: query
+          name: province
+          schema:
+            type: string
+          example: Western
+      responses:
+        '200':
+          description: List of police stations
+          content:
+            application/json:
+              example:
+                success: true
+                results: 3
+                data:
+                  - name: Colombo Central Police Station
+                    stationCode: COL-101
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /master/stations/{code}:
+    get:
+      summary: Get a police station by code
+      operationId: getStation
+      tags:
+        - Master Data Management
+      parameters:
+        - in: path
+          name: code
+          required: true
+          schema:
+            type: string
+          example: COL-101
+      responses:
+        '200':
+          description: Police station found
+        '404':
+          description: Police station not found
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    
+    patch:
+      summary: Update a police station (hq_admin and station_officer only)
+      operationId: updateStation
+      tags:
+        - Master Data Management
+      parameters:
+        - in: path
+          name: code
+          required: true
+          schema:
+            type: string
+          example: COL-101
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateStationRequest'
+      responses:
+        '200':
+          description: Station updated
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    
+    delete:
+      summary: Delete a police station (hq_admin only)
+      operationId: deleteStation
+      tags:
+        - Master Data Management
+      parameters:
+        - in: path
+          name: code
+          required: true
+          schema:
+            type: string
+          example: COL-101
+      responses:
+        '204':
+          description: Station deleted
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+ 

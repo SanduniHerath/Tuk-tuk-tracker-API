@@ -11,7 +11,7 @@ router.get('/', getDrivers);
 
 router.get('/:nic', getDriver);
 
-router.post('/', protectauthorize('hq_admin', 'tuk_tuk_operator'), createDriver);
+router.post('/', protect, authorize('hq_admin', 'tuk_tuk_operator'), createDriver);
 
 router.put('/:nic', protect, authorize('hq_admin', 'tuk_tuk_operator'), updateDriver);
 
