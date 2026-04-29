@@ -35,10 +35,100 @@ export const submitPing = async (req, res, next) => {
   }
 };
 
+//get latest location for all tuktuks with pagination
+export const getAllLatestLocations = async (req, res, next) => {
+  try {
+    //here I implement pagination logic
+    const page = parseInt(req.query.page, 10) || 1;
+    const limit = parseInt(req.query.limit, 10) || 10;
+    const skip = (page - 1) * limit;
+    
+    //aggregate query to get the latest location ping for each tuktuk
+    const pipeline = [
+      { $sort: { vehicle: 1, timestamp: -1 } },
+      {
+        $group: {
+          _id: '$vehicle',
+          latestPing: { $first: '$$ROOT' }
+        }
+      },
+      { $replaceRoot: { newRoot: '$latestPing' } },
+
+      //joining with the vehicle collection
+      {
+        $lookup: {
+          from: 'vehicles',
+          localField: 'vehicle',
+          foreignField: '_id',
+          as: 'vehicle'
+        }
+      },
+
+      //unwind the vehicle array to get an object
+      { $unwind: '$vehicle' },
+
+      //project only display needed fileds
+      {
+        $project: {
+          latitude: 1,
+          longitude: 1,
+          speed: 1,
+          timestamp: 1,
+          'vehicle.registrationNumber': 1,
+          'vehicle.vehicleType': 1,
+          'vehicle.ownerName': 1
+        }
+      },
+
+      //pagination
+      { $skip: skip },
+      { $limit: limit }
+    ];
+
+    const data = await LocationPing.aggregate(pipeline);
+    const totalResult = await LocationPing.aggregate([
+      {
+        $group: { _id: '$vehicle' }//count unique tuktuks
+      },
+      {
+        $count: 'total'
+      }
+    ]);
+
+    const total = totalResult[0]?.total || 0;
+
+    res.status(200).json({
+      success: true,
+      page,
+      limit,
+      total,
+      pages: Math.ceil(total / limit),
+      results: data.length,
+      data
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
+
 //get latest location for a tuktuk by using the vehicle ID
 export const getLatestLocation = async (req, res, next) => {
   try {
-    const ping = await LocationPing.findOne({ vehicle: req.params.vehicleId })
+    const vehicleDoc = await Vehicle.findOne({
+      registrationNumber: req.params.regNo
+    });
+
+    if (!vehicleDoc) {
+      return res.status(404).json({
+        success: false,
+        message: 'Vehicle not found'
+      });
+    }
+    //build a filter using the tuktuk's object id to find the latest ping for that tuktuk
+    const filter = { vehicle: vehicleDoc._id };
+
+    const ping = await LocationPing.findOne(filter)
       .sort('-timestamp')
       .populate('vehicle');
 
@@ -53,7 +143,19 @@ export const getLatestLocation = async (req, res, next) => {
 export const getHistory = async (req, res, next) => {
   try {
     const { from, to } = req.query;
-    const filter = { vehicle: req.params.vehicleId };
+
+    const vehicleDoc = await Vehicle.findOne({
+      registrationNumber: req.params.regNo
+    });
+
+    if (!vehicleDoc) {
+      return res.status(404).json({
+        success: false,
+        message: 'Vehicle not found'
+      });
+    }
+
+    const filter = { vehicle: vehicleDoc._id };
 
     if (from || to) {
       filter.timestamp = {};
@@ -61,20 +163,44 @@ export const getHistory = async (req, res, next) => {
       if (to) filter.timestamp.$lte = new Date(to);
     }
 
-    const history = await LocationPing.find(filter).sort('-timestamp').limit(100);
-    res.status(200).json({ success: true, results: history.length, data: history });
+    //here I fetch the location history
+    const history = await LocationPing.find(filter)
+      .sort('-timestamp')
+      .limit(100);
+
+    res.status(200).json({
+      success: true,
+      results: history.length,
+      data: history
+    });
+
   } catch (error) {
     next(error);
   }
 };
 
-//get latest location for all tuktuks in a district (for station officers)
+//get latest location for all tuktuks in a district
 export const getDistrictLatest = async (req, res, next) => {
   try {
-    const vehicles = await Vehicle.find({ district: req.params.districtId }).select('_id');
+    const districtDoc = await District.findOne({
+      name: req.params.districtName
+    });
+
+    if (!districtDoc) {
+      return res.status(404).json({
+        success: false,
+        message: 'District not found'
+      });
+    }
+
+    //get vehicles in that district
+    const vehicles = await Vehicle.find({
+      district: districtDoc._id
+    }).select('_id');
+
     const vehicleIds = vehicles.map(v => v._id);
 
-    //aggregate query to get the latest ping for each vehicle in the district
+    //here use aggregate function to get the latest ping
     const latestPings = await LocationPing.aggregate([
       { $match: { vehicle: { $in: vehicleIds } } },
       { $sort: { vehicle: 1, timestamp: -1 } },
@@ -82,7 +208,12 @@ export const getDistrictLatest = async (req, res, next) => {
       { $replaceRoot: { newRoot: '$latestPing' } }
     ]);
 
-    res.status(200).json({ success: true, count: latestPings.length, data: latestPings });
+    res.status(200).json({
+      success: true,
+      count: latestPings.length,
+      data: latestPings
+    });
+
   } catch (error) {
     next(error);
   }
