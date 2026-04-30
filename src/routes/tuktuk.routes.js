@@ -9,9 +9,9 @@ const router = express.Router();
 //in here, I protect all the tuk tuk routes
 router.use(protect);
 
-router.get('/', getTuktuks);
+router.get('/', authorize('hq_admin', 'provincial_officer', 'station_officer'), getTuktuks);
 
-router.get('/:regNo', getTuktuk);
+router.get('/:regNo', authorize('hq_admin', 'provincial_officer', 'station_officer'), getTuktuk);
 
 router.post('/', authorize('hq_admin', 'provincial_officer'), createTuktuk);
 

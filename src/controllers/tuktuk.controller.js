@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import { Tuktuk, District, Province, Driver} from '../models/index.js';
 import ApiFeatures from '../utils/apiFeatures.js';
 
@@ -7,14 +8,14 @@ export const getTuktuks = async (req, res, next) => {
 
     //role based filtering
     if (req.user.role === 'provincial_officer') {
-      req.query.province = req.user.province;
+      req.query.province = req.user.province.toString();
     } else if (req.user.role === 'station_officer') {
-      req.query.district = req.user.district;
+      req.query.district = req.user.district.toString();
     }
 
     //here, i convert my district and province names into their corrosponding object IDs
     //handle district name
-    if (req.query.district && isNaN(req.query.district)) {
+    if (req.query.district && typeof req.query.district === 'string' && !mongoose.Types.ObjectId.isValid(req.query.district)) {
       const district = await District.findOne({
         name: { $regex: `^${req.query.district}$`, $options: 'i' } // case-insensitive
       });
@@ -30,7 +31,7 @@ export const getTuktuks = async (req, res, next) => {
     }
 
     //handle province name
-    if (req.query.province && isNaN(req.query.province)) {
+    if (req.query.province && typeof req.query.province === 'string' && !mongoose.Types.ObjectId.isValid(req.query.province)) {
       const province = await Province.findOne({
         name: { $regex: `^${req.query.province}$`, $options: 'i' }
       });

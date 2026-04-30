@@ -8,7 +8,7 @@ export const submitPing = async (req, res, next) => {
 
     if (req.user.role === 'gps_device') {
       //secure mode: gps device sends pings with its own vehicleId (bound to its account)
-      vehicleId = req.user.vehicle;
+      vehicleId = req.user.tuktuk;
       if (!vehicleId) {
         return res.status(403).json({ success: false, message: 'This GPS device is not linked to any vehicle. Contact HQ Admin.' });
       }
