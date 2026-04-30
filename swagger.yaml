@@ -106,7 +106,7 @@ components:
         username:
           type: string
           example: colombo_officer
-        fullName:
+        fullname:
           type: string
           example: Samantha Fernando
         role:
@@ -221,7 +221,7 @@ components:
         name:
           type: string
           example: Colombo Central Police Station
-        stationCode:
+        policeStationCode:
           type: string
           example: COL-101
         district:
@@ -246,7 +246,7 @@ components:
         name:
           type: string
           example: Negombo Police Station
-        stationCode:
+        policeStationCode:
           type: string
           example: NEG-102
         district:
@@ -266,7 +266,7 @@ components:
       type: object
       properties:
         name: { type: string }
-        stationCode: { type: string }
+        policeStationCode: { type: string }
         district: { type: string }
         province: { type: string }
         address: { type: string }
@@ -931,18 +931,18 @@ paths:
                 value:
                   username: kandy_officer
                   password: Officer@1234
-                  fullName: Kamal Perera
+                  fullname: Kamal Perera
                   role: provincial_officer
-                  province: 64a1f2b3c4d5e6f7a8b9c0d1
+                  province: Central
               station_officer:
                 summary: Create a Station Officer
                 value:
                   username: galle_station
                   password: Station@1234
-                  fullName: Samantha Fernando
+                  fullname: Samantha Fernando
                   role: station_officer
-                  province: 64a1f2b3c4d5e6f7a8b9c0d1
-                  district: 64a1f2b3c4d5e6f7a8b9c0d2
+                  province: Southern
+                  district: Galle
       responses:
         '201':
           description: User created successfully
@@ -1070,6 +1070,7 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
 
+  /auth/delete/{username}:
     delete:
       summary: Delete a user (hq_admin only)
       description: Only hq_admin can delete users.

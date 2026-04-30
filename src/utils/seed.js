@@ -59,12 +59,12 @@ const seedDB = async () => {
     //in here, I create 5 users for each role
     await User.create([
       //role 1 hq admin (full access to everything)
-      { username: 'admin', password: 'password123', fullname: 'HQ Master Admin', role: 'hq_admin' },
+      { username: 'admin', password: 'admin@123', fullname: 'HQ Master Admin', role: 'hq_admin' },
 
       //role 2 provincial officer
       {
         username: 'wp_officer',
-        password: 'password123',
+        password: 'western@123',
         fullname: 'Western Province Officer',
         role: 'provincial_officer',
         province: getProv('WP')
@@ -73,7 +73,7 @@ const seedDB = async () => {
       //role 3 station officer (scoped only to one station: Colombo Central Police Station)
       {
         username: 'colombo_officer',
-        password: 'password123',
+        password: 'colombo@123',
         fullname: 'Colombo Station Officer',
         role: 'station_officer',
         station: stationData.find(s => s.name === 'Colombo Central Police Station')._id,
@@ -137,18 +137,10 @@ const seedDB = async () => {
     const insertedVehicles = await TukTuk.insertMany(vehiclesToInsert);
     const insertedGPSTrackers = await GPSDevice.insertMany(gpstrackersToInsert);
 
-    //role 4 tuktuk operator (manage all the tuktuks and drivers)
-    await User.create({
-      username: 'TT-Saman',
-      password: 'password123',
-      fullname: 'TT-Saman',
-      role: 'tuk_tuk_operator',
-    });
-
-    //role 5 gps device (not a human user, but a device user for testing device-level auth and pings) 
+    //role 4 gps device (not a human user, but a device user for testing device-level auth and pings) 
     await User.create({
       username: 'gps_device',
-      password: 'password123',
+      password: 'gpsdevice@123',
       fullname: 'GPS Device',
       role: 'gps_device',
       vehicle: insertedVehicles[0]._id,

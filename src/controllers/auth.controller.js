@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { User } from '../models/index.js';
+import { User, Province, District } from '../models/index.js';
 import bcrypt from 'bcryptjs';
 
 //in here I setup a helper function to create a JWT token which is used to
@@ -9,12 +9,58 @@ const signToken = (id) =>
 
 export const register = async (req, res, next) => {
   try {
-    //in here, I create the user in the db using the data from the request body
-    const newUser = await User.create(req.body);
+    const { province, district, ...rest } = req.body;
+
+    let provinceId = null;
+    let districtId = null;
+
+    //convert province name to object id
+    if (province && typeof province === 'string') {
+      const provinceDoc = await Province.findOne({
+        name: { $regex: `^${province}$`, $options: 'i' }
+      });
+
+      if (!provinceDoc) {
+        return res.status(404).json({
+          success: false,
+          message: 'Province not found'
+        });
+      }
+
+      provinceId = provinceDoc._id;
+    }
+
+    //convert district name to object id
+    if (district && typeof district === 'string') {
+      const districtDoc = await District.findOne({
+        name: { $regex: `^${district}$`, $options: 'i' }
+      });
+
+      if (!districtDoc) {
+        return res.status(404).json({
+          success: false,
+          message: 'District not found'
+        });
+      }
+
+      districtId = districtDoc._id;
+    }
+
+    const newUser = await User.create({
+      ...rest,
+      province: provinceId,
+      district: districtId
+    });
+
     res.status(201).json({
       success: true,
-      data: { id: newUser._id, username: newUser.username, role: newUser.role }
+      data: {
+        id: newUser._id,
+        username: newUser.username,
+        role: newUser.role
+      }
     });
+
   } catch (error) {
     next(error);
   }

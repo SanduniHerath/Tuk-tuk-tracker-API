@@ -184,7 +184,7 @@ export const getStations = async (req, res, next) => {
       filter.province = provinceDoc._id;
     }
 
-    const data = await Station
+    const data = await PoliceStation
       .find(filter)
       .populate('district province');
 
@@ -202,7 +202,7 @@ export const getStations = async (req, res, next) => {
 //get a police station details by using station code
 export const getStation = async (req, res, next) => {
   try {
-    const data = await Station.findOne({ stationCode: req.params.code }).populate('district province');
+    const data = await PoliceStation.findOne({ policeStationCode: req.params.code }).populate('district province');
     res.status(200).json({ success: true, data });
   } catch (error) {
     next(error);
@@ -248,7 +248,7 @@ export const createStation = async (req, res, next) => {
     }
 
     //create station
-    const data = await Station.create({
+    const data = await PoliceStation.create({
       ...rest,
       district: districtDoc._id,
       province: provinceDoc._id
@@ -268,8 +268,8 @@ export const createStation = async (req, res, next) => {
 //update a police station by using station code
 export const updateStation = async (req, res, next) => {
   try {
-    const data = await Station.findOneAndUpdate(
-      { stationCode: req.params.code },
+    const data = await PoliceStation.findOneAndUpdate(
+      { policeStationCode: req.params.code },
       req.body,
       { new: true, runValidators: true }
     );
@@ -283,8 +283,8 @@ export const updateStation = async (req, res, next) => {
 //delete a police station by using station code
 export const deleteStation = async (req, res, next) => {
   try {
-    const data = await Station.findOneAndDelete(
-      { stationCode: req.params.code },
+    const data = await PoliceStation.findOneAndDelete(
+      { policeStationCode: req.params.code },
       { new: true, runValidators: true }
     );
     res.status(204).json({ success: true, data: null });
