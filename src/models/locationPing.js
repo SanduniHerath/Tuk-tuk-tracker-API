@@ -8,7 +8,7 @@ const locationPingSchema = new Schema(
     
     vehicle: {
       type: Schema.Types.ObjectId,
-      ref: 'Vehicle',
+      ref: 'Tuktuk',
       required: true,
     },
 

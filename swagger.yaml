@@ -106,7 +106,7 @@ components:
         username:
           type: string
           example: colombo_officer
-        fullName:
+        fullname:
           type: string
           example: Samantha Fernando
         role:
@@ -221,7 +221,7 @@ components:
         name:
           type: string
           example: Colombo Central Police Station
-        stationCode:
+        policeStationCode:
           type: string
           example: COL-101
         district:
@@ -246,7 +246,7 @@ components:
         name:
           type: string
           example: Negombo Police Station
-        stationCode:
+        policeStationCode:
           type: string
           example: NEG-102
         district:
@@ -266,7 +266,7 @@ components:
       type: object
       properties:
         name: { type: string }
-        stationCode: { type: string }
+        policeStationCode: { type: string }
         district: { type: string }
         province: { type: string }
         address: { type: string }
@@ -282,10 +282,10 @@ components:
         fullName:
           type: string
           example: Kasun Perera
-        nationalId:
+        nic:
           type: string
           example: 195000001V
-        licenseNumber:
+        licenseNo:
           type: string
           example: B1000001
         phone:
@@ -306,18 +306,18 @@ components:
       type: object
       required:
         - fullName
-        - nationalId
-        - licenseNumber
+        - nic
+        - licenseNo
         - district
         - province
       properties:
         fullName:
           type: string
           example: Nimal Silva
-        nationalId:
+        nic:
           type: string
           example: 199512345678V
-        licenseNumber:
+        licenseNo:
           type: string
           example: B1234567
         phone:
@@ -850,33 +850,6 @@ tags:
 #paths for each section
 paths:
 
- #health check
-  /health:
-    get:
-      summary: Health check — verify server is running
-      description: Public endpoint. No authentication required.
-      operationId: healthCheck
-      security: []
-      tags:
-        - Authentication
-      responses:
-        '200':
-          description: Server is running
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  success:
-                    type: boolean
-                    example: true
-                  status:
-                    type: string
-                    example: UP
-                  timestamp:
-                    type: string
-                    format: date-time
-
  #authentication 
   /auth/login:
     post:
@@ -958,18 +931,18 @@ paths:
                 value:
                   username: kandy_officer
                   password: Officer@1234
-                  fullName: Kamal Perera
+                  fullname: Kamal Perera
                   role: provincial_officer
-                  province: 64a1f2b3c4d5e6f7a8b9c0d1
+                  province: Central
               station_officer:
                 summary: Create a Station Officer
                 value:
                   username: galle_station
                   password: Station@1234
-                  fullName: Samantha Fernando
+                  fullname: Samantha Fernando
                   role: station_officer
-                  province: 64a1f2b3c4d5e6f7a8b9c0d1
-                  district: 64a1f2b3c4d5e6f7a8b9c0d2
+                  province: Southern
+                  district: Galle
       responses:
         '201':
           description: User created successfully
@@ -1097,6 +1070,7 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
 
+  /auth/delete/{username}:
     delete:
       summary: Delete a user (hq_admin only)
       description: Only hq_admin can delete users.
@@ -1421,8 +1395,8 @@ paths:
               $ref: '#/components/schemas/CreateDriverRequest'
             example:
               fullName: Nimal Silva
-              nationalId: 199512345678V
-              licenseNumber: B1234567
+              nic: 199512345678V
+              licenseNo: B1234567
               phone: "0771234567"
               district: Galle
               province: Southern
@@ -1436,7 +1410,7 @@ paths:
         '409':
           $ref: '#/components/responses/Conflict'
 
-  /drivers/{nationalId}:
+  /drivers/{nic}:
     get:
       summary: Get a single driver by ID
       operationId: getDriver
@@ -1444,7 +1418,7 @@ paths:
         - Drivers
       parameters:
         - in: path
-          name: nationalId
+          name: nic
           required: true
           schema:
             type: string
@@ -1475,7 +1449,7 @@ paths:
         - Drivers
       parameters:
         - in: path
-          name: nationalId
+          name: nic
           required: true
           schema:
             type: string
@@ -1514,7 +1488,7 @@ paths:
         - Drivers
       parameters:
         - in: path
-          name: nationalId
+          name: nic
           required: true
           schema:
             type: string
@@ -1843,7 +1817,7 @@ paths:
         '403':
           $ref: '#/components/responses/Forbidden'
 
-  /alerts/suspicious/{districtName}:
+  /alerts/suspicious/district/{districtName}:
     get:
       summary: Get all suspicious vehicles in a district
       description: |
@@ -1888,7 +1862,7 @@ paths:
         '403':
           $ref: '#/components/responses/Forbidden'
 
-  /alerts/suspicious/{provinceName}:
+  /alerts/suspicious/province/{provinceName}:
     get:
       summary: Get all suspicious vehicles in a province
       description: |

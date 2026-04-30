@@ -1,4 +1,4 @@
-import { Driver } from '../models/index.js';
+import { Driver, District, Province } from '../models/index.js';
 import ApiFeatures from '../utils/apiFeatures.js';
 
 //get all drivers with filtering, sorting, field limiting and pagination
@@ -130,7 +130,7 @@ export const updateDriver = async (req, res, next) => {
     if (!driver) {
       return res.status(404).json({ success: false, message: 'Driver not found' });
     }
-    res.status(200).json({ success: true, data });
+    res.status(200).json({ success: true, data: driver });
   } catch (error) {
     next(error);
   }

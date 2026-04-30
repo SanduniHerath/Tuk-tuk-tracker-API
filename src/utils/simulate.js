@@ -18,8 +18,7 @@
 //5.erratic movement pattern - which means irregular zigzag movement that does not follow roads
 import mongoose from 'mongoose';
 import 'dotenv/config';
-import { Vehicle, LocationPing } from '../models/index.js';
-
+import { Tuktuk, LocationPing } from '../models/index.js';
 
 //here I setup all the config params
 const CONFIG = {
@@ -92,7 +91,7 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 //in here I initialize the fleet by fetching all active vehicles from the database and assigning them random starting positions and behaviour types (normal or one of the suspicious patterns)
 const initializeFleet = async (vehicles) => {
   //here i fetch district details for all tuktuks to assign starting positions and behaviour patterns based on their districts
-  const populatedVehicles = await Vehicle.find({ isActive: true })
+  const populatedVehicles = await Tuktuk.find({ isActive: true })
     .populate('district', 'name')
     .select('_id district');
 
@@ -305,7 +304,7 @@ const runSimulation = async () => {
   console.log('═══════════════════════════════════════');
 
   //load and initialize all active tuktuks
-  const rawVehicles = await Vehicle.find({ isActive: true }).select('_id');
+  const rawVehicles = await Tuktuk.find({ isActive: true }).select('_id');
 
   if (rawVehicles.length === 0) {
     console.error('No vehicles found. Please run seed.js first.');
