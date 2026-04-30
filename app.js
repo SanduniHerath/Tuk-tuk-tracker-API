@@ -14,6 +14,8 @@ import authRoutes from './src/routes/auth.routes.js';
 import masterRoutes from './src/routes/master.routes.js';
 import driverRoutes from './src/routes/driver.routes.js';
 import tuktukRoutes from './src/routes/tuktuk.routes.js';
+import locationRoutes from './src/routes/location.routes.js';
+import alertRoutes from './src/routes/alert.routes.js';
 
 //initialize express
 const app = express();
@@ -25,7 +27,7 @@ const PORT = process.env.PORT || 3000;
 app.use(helmet({ contentSecurityPolicy: false })); //in here I disable CSP so that swagger load correctly
 app.use(cors());//allow all origins
 app.use(express.json({ limit: '10kb' })); //set safety limit of 10kb to prevent large payloads from crashing the server 
-app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev')); //in here I set the morgan to log requests in production mode and in development mode it will log all the requests
+app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : process.env.NODE_ENV === 'test' ? 'silent' : 'dev')); //in here I set the morgan to log requests in production mode and in development mode it will log all the requests
 
 
 //here I setup rate limiting to prevent ddos attacks 
@@ -35,7 +37,12 @@ const limiter = rateLimit({
   max: 100,
   message: { success: false, message: 'Too many requests. Please wait 15 minutes.' }
 });
-app.use('/api', limiter);//only apply to api routes
+
+//disable rate limiting in test environment to prevent 429 failures during local testing
+if (process.env.NODE_ENV !== 'test') {
+  app.use('/api', limiter);
+}
+
 
 swaggerSetup(app);
 
@@ -44,6 +51,8 @@ app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/master', masterRoutes);
 app.use('/api/v1/drivers', driverRoutes);
 app.use('/api/v1/tuktuks', tuktukRoutes);
+app.use('/api/v1/locations', locationRoutes);
+app.use('/api/v1/alerts', alertRoutes)
 
 //here I setup a health check route to verify the cloud deployment is live
 app.get('/health', (req, res) => {
@@ -69,15 +78,17 @@ const startServer = async () => {
   try {
     await connectDB();//ensure db is ready
     app.listen(PORT, () => {
-      console.log(`🚀 Foundation Server running on port ${PORT}`);
-      console.log(`📖 API Specs: http://localhost:${PORT}/api-docs`);
+      console.log(`Foundation Server running on port ${PORT}`);
+      console.log(`API Specs: http://localhost:${PORT}/api-docs`);
     });
   } catch (error) {
-    console.error('❌ CRITICAL: Failed to start server:', error.message);
+    console.error('CRITICAL: Failed to start server:', error.message);
     process.exit(1);
   }
 };
 
-startServer();
+if (process.env.NODE_ENV !== 'test') {
+  startServer();
+}
 
 export default app;

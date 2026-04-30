@@ -1,60 +1,86 @@
 import mongoose from "mongoose";
 
-//in here I use schema to define the structure of my tuk tuk vehicle data in my MongoDB db
 const { Schema } = mongoose;
 
-//this is my tuk tuk model
-//this is my main entity where all the tuk tuks being tracked will be stored
-//each tuk tuk is linked to a driver, district and province
+// This is the LocationPing model, which represents a single GPS ping sent by a tuk tuk's GPS tracker.
 const locationPingSchema = new Schema(
-    {
-        tuktuk: {
-            type: Schema.Types.ObjectId,
-            ref: "Tuktuk",
-            required: true,
-        },
-
-        latitude: {
-            type: Number,
-            required: true,
-            min: -90, //min valid latitude on Earth
-            max: 90, //max valid latitude on Earth
-        },
-        longitude: {
-            type: Number,
-            required: true,
-            min: -180, //min valid longitude on Earth
-            max: 180, //max valid longitude on Earth
-
-        },
-        speed: { //speed in km/h
-            type: Number,
-            default: 0,
-        },
-        heading: { //direction in degrees - 0 is north, 90 is east, 180 is south, 270 is west
-            type: Number,
-        },
-        accuracy: { //accuracy of the location data in meters
-            type: Number,
-        },
-        timestamp: {
-            type: Date,
-            default: Date.now, //auto set to the current time
-        },
+  {
+    
+    vehicle: {
+      type: Schema.Types.ObjectId,
+      ref: 'Tuktuk',
+      required: true,
     },
 
-    //this adds createdAt and updatedAt to every doc
-    { timestamps: false } //we don't need these bcz we already have our own timestamp field
+    //these are the gps cordinates of the ping
+    latitude: {
+      type: Number,
+      required: true,
+      min: -90, 
+      max: 90,  
+    },
+    longitude: {
+      type: Number,
+      required: true,
+      min: -180,
+      max: 180, 
+    },
+
+    //these are additional movement data that can be used for anomaly detection and alerts
+    speed: {
+      type: Number,
+      default: 0,  
+    },
+    heading: {
+      type: Number,//heading means directions in degrees 0-north, 90-east, 180-south, 270-west
+    },
+    accuracy: {
+      type: Number, //gps accuracy in meters, lower is better
+    },
+
+    timestamp: {
+      type: Date,
+      default: Date.now,
+    },
+
+    //this field is used to identify whether the ping is suspicious or not
+    //false means normal behavior
+    isAnomaly: {
+      type: Boolean,
+      default: false,
+    },
+
+   //if isAnomaly is true, this field specifies the type of anomaly detected
+    anomaly: {
+      type: String,
+      enum: [
+        'NIGHT_MOVEMENT', //this pattern is detected when a tuk tuk moves between 11pm and 5am
+        'SPEEDING', //this pattern is detected when a tuk tuk exceeds a certain speed threshold (e.g. 80 km/h)
+        'BOUNDARY_CROSS',//this pattern is detected when a tuk tuk leaves a predefined geofence area
+        'STATIONARY',//this pattern recognized when a tuk tuk remains in the same location for an unusually long time (e.g. more than 4 hours)
+        'ERRATIC',//this pattern is detected when a tuk tuk movements are erratic which means it shows sudden changes in tuk tuk movements
+        null,//this means normal behavior
+      ],
+      default: null,
+    },
+  },
+  {
+    timestamps: false,
+  }
 );
 
-// in here I define indexes to optimize the searching of location pings
-locationPingSchema.index({ tuktuk: 1, timestamp: -1 }); //this index helps to quickly find the latest location pings for a specific tuk tuk
-//-1 means that the pings will be sorted by timestamp in descending order, so the most recent ping will be found first
-locationPingSchema.index({ timestamp: -1 }); //this index helps to quickly find all location pings within a specific time range, which is useful for analytics
+//easy to retrive the latest live location of a tuk tuk
+locationPingSchema.index({ vehicle: 1, timestamp: -1 });
 
-//this creates a model class called LocationPing with methods like find(), create(), findById()
-//it allows us to interact with the "LocationPing" collection in our MongoDB database
+//easy to retrive the latest anomalies for a tuk tuk
+locationPingSchema.index({ isAnomaly: 1, timestamp: -1 });
+
+//easy to retrive all pings for tuk tuk in a time range for historical playback
+locationPingSchema.index({ timestamp: -1 });
+
+//easy to retrive and filter anomalies
+locationPingSchema.index({ vehicle: 1, anomaly: 1, timestamp: -1 });
+
+
 const LocationPing = mongoose.model("LocationPing", locationPingSchema);
-
-//exporting the LocationPing model
 export default LocationPing;

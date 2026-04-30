@@ -1,39 +1,155 @@
 import jwt from 'jsonwebtoken';
-import { User } from '../models/index.js';
+import { User, Province, District } from '../models/index.js';
+import bcrypt from 'bcryptjs';
 
 //in here I setup a helper function to create a JWT token which is used to
 //create a unique security badge for an officer
 const signToken = (id) =>
   jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN || '7d' });
 
-
-/**
- * @desc    Register a new police officer
- * @route   POST /api/v1/auth/register
- * @access  Private
- */
 export const register = async (req, res, next) => {
   try {
-    //in here, I create the user in the db using the data from the request body
-    const newUser = await User.create(req.body);
+    const { province, district, ...rest } = req.body;
 
-    //send a success message through 201 status code
+    let provinceId = null;
+    let districtId = null;
+
+    //convert province name to object id
+    if (province && typeof province === 'string') {
+      const provinceDoc = await Province.findOne({
+        name: { $regex: `^${province}$`, $options: 'i' }
+      });
+
+      if (!provinceDoc) {
+        return res.status(404).json({
+          success: false,
+          message: 'Province not found'
+        });
+      }
+
+      provinceId = provinceDoc._id;
+    }
+
+    //convert district name to object id
+    if (district && typeof district === 'string') {
+      const districtDoc = await District.findOne({
+        name: { $regex: `^${district}$`, $options: 'i' }
+      });
+
+      if (!districtDoc) {
+        return res.status(404).json({
+          success: false,
+          message: 'District not found'
+        });
+      }
+
+      districtId = districtDoc._id;
+    }
+
+    const newUser = await User.create({
+      ...rest,
+      province: provinceId,
+      district: districtId
+    });
+
     res.status(201).json({
       success: true,
-      message: 'New officer registered successfully.',
-      data: { id: newUser._id, username: newUser.username, role: newUser.role }
+      data: {
+        id: newUser._id,
+        username: newUser.username,
+        role: newUser.role
+      }
     });
+
   } catch (error) {
-    next(error);//pass error to the central error handler
+    next(error);
   }
 };
 
+//get all users
+export const getAllUsers = async (req, res, next) => {
+  try {
+    const users = await User.find();
+    res.status(200).json({
+      success: true,
+      data: users
+    });
+  } catch (error) {
+    next(error);
+  }
+};
 
-/**
- * @desc    Login a police officer
- * @route   POST /api/v1/auth/login
- * @access  Private
- */
+//get user by username
+export const getUser = async (req, res, next) => {
+  try {
+    const user = await User.findOne({ username: req.params.username });
+    res.status(200).json({
+      success: true,
+      data: user
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+//update user by username
+export const updateUser = async (req, res, next) => {
+  try {
+
+    //if the password is being updated, hash it before saving to the database
+    if (req.body.password) {
+      req.body.password = await bcrypt.hash(req.body.password, 10);
+    }
+    const updatedUser = await User.findOneAndUpdate(
+      { username: req.params.username },
+      req.body,
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({
+        success: false,
+        message: 'User not found'
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      data: {
+        id: updatedUser._id,
+        username: updatedUser.username,
+        role: updatedUser.role
+      }
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
+
+//delete user by username
+export const deleteUser = async (req, res, next) => {
+  try {
+    const user = await User.findOneAndDelete(
+      { username: req.params.username },
+      req.body,
+      { new: true, runValidators: true }
+      );
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'User not found'
+      });
+    }
+
+    res.status(204).send();
+
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const login = async (req, res, next) => {
   try {
     const { username, password } = req.body;
@@ -64,11 +180,6 @@ export const login = async (req, res, next) => {
   }
 };
 
-/**
- * @desc    Get profile of currently logged in user
- * @route   GET /api/v1/auth/me
- * @access  Private
- */
 export const getMe = async (req, res, next) => {
   //return user data 
   res.status(200).json({ success: true, data: req.user });

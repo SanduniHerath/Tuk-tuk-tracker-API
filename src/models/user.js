@@ -28,7 +28,7 @@ const userSchema = new Schema(
         },
         role: {
             type: String,
-            enum: ["hq_admin", "provincial_officer", "station_officer", "device"], //this means that the user's role can only be one of these 4 values
+            enum: ["hq_admin", "provincial_officer", "station_officer", 'gps_device'], //this means that the user's role can only be one of these 5 values
             required: true
         },
 

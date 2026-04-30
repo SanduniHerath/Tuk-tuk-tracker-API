@@ -8,7 +8,7 @@ const { Schema } = mongoose;
 //each tuk tuk is linked to a driver, district and province
 const tuktukSchema = new Schema(
     {
-        registrationNo: {
+        registrationNumber: {
             type: String,
             required: true,
             unique: true, //this means that no 2 tuktuks can have the same registration number

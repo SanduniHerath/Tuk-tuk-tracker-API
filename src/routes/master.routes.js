@@ -1,37 +1,39 @@
 import express from 'express';
 import {
-  getProvinces, getDistricts,
-  createProvince, createDistrict
-} from '../controllers/master.controller.js'; //import logic
-import { protect, authorize } from '../middleware/auth.js'; //import security guard
+  getProvinces, getProvince, updateProvince, deleteProvince,
+  getDistricts, getDistrict, updateDistrict, deleteDistrict,
+  getStations, getStation, createStation, updateStation, deleteStation
+} from '../controllers/master.controller.js';
+import { protect, authorize } from '../middleware/auth.js';
 
 const router = express.Router();
 
-/**
- * @swagger
- * tags:
- *   name: Master Data Management
- *   description: Administrative control of Provinces and Districts in Sri Lanka
- */
-
-//in here I apply protect to all master routes 
-//because only officers should see the hierarchy
 router.use(protect);
 
+router.get('/provinces', protect, authorize('hq_admin', 'provincial_officer', 'station_officer'), getProvinces);
 
-//in here I setup the route to get all provinces
-router.get('/provinces', getProvinces);
+router.get('/provinces/:name', protect, authorize('hq_admin', 'provincial_officer', 'station_officer'), getProvince);
 
-//in here I setup the route to get all districts
-router.get('/districts', getDistricts);
+router.patch('/provinces/:name', protect, authorize('hq_admin', 'provincial_officer'), updateProvince);
 
+router.delete('/provinces/:name', protect, authorize('hq_admin', 'provincial_officer'), deleteProvince);
 
-//admin oprtation which is allowed for only hq admin
+router.get('/districts', protect, authorize('hq_admin', 'provincial_officer', 'station_officer'), getDistricts);
 
-//in here I setup the route to create a new province
-router.post('/provinces', authorize('hq_admin'), createProvince);
+router.get('/districts/:name', protect, authorize('hq_admin', 'provincial_officer', 'station_officer'), getDistrict);
 
-//in here I setup the route to create a new district
-router.post('/districts', authorize('hq_admin'), createDistrict);
+router.patch('/districts/:name', protect, authorize('hq_admin'), updateDistrict);
+
+router.delete('/districts/:name', protect, authorize('hq_admin'), deleteDistrict);
+
+router.post('/stations', protect, authorize('hq_admin', 'station_officer'), createStation);
+
+router.get('/stations', protect, authorize('hq_admin', 'provincial_officer', 'station_officer'), getStations);
+
+router.get('/stations/:code', protect, authorize('hq_admin', 'provincial_officer', 'station_officer'), getStation);
+
+router.patch('/stations/:code', protect, authorize('hq_admin', 'station_officer'), updateStation);
+
+router.delete('/stations/:code', protect, authorize('hq_admin'), deleteStation);
 
 export default router;

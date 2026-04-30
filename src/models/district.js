@@ -14,11 +14,23 @@ const districtSchema = new Schema(
             required: true,
             trim: true //this means that any extra spaces from start and end of the name will be automatically removed
         },
+
+        code: { 
+            type: String, 
+            required: true, 
+            unique: true, 
+            uppercase: true, 
+            trim: true
+         },
+
+         
        province: {
             type: Schema.Types.ObjectId, //ObjectID used to stores the ID of another doc like a foreign key in SQL
             ref: "Province", //in here I tells Mongoose this links to the Province model
             required: true
        }
+
+
     },
 
     //this adds createdAt and updatedAt to every doc
