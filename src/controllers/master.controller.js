@@ -1,5 +1,6 @@
 import { Province, District, PoliceStation } from '../models/index.js';
 
+
 //to get all provinces
 export const getProvinces = async (req, res, next) => {
   try {

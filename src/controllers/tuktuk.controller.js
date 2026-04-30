@@ -1,4 +1,4 @@
-import { Tuktuk } from '../models/index.js';
+import { Tuktuk, District, Province, Driver} from '../models/index.js';
 import ApiFeatures from '../utils/apiFeatures.js';
 
 //get all tuk tuk vehicles with filtering, sorting, field limiting and pagination
@@ -75,7 +75,7 @@ export const getTuktuk = async (req, res, next) => {
       return res.status(404).json({ success: false, message: 'Tuk-Tuk not found' });
     }
 
-    res.status(200).json({ success: true, data });
+    res.status(200).json({ success: true, data: tuktuk });
   } catch (error) {
     next(error);
   }
@@ -84,8 +84,68 @@ export const getTuktuk = async (req, res, next) => {
 //create a new tuk tuk
 export const createTuktuk = async (req, res, next) => {
   try {
+    const { driver, district, province } = req.body;
+
+    // 1. Find Driver by NIC (or username or whatever you use)
+    const driverDoc = await Driver.findOne({ nic: driver });
+
+    if (!driverDoc) {
+      return res.status(404).json({
+        success: false,
+        message: 'Driver not found'
+      });
+    }
+
+    // 2. Find District by name
+    const districtDoc = await District.findOne({
+      name: { $regex: `^${district}$`, $options: 'i' }
+    });
+
+    if (!districtDoc) {
+      return res.status(404).json({
+        success: false,
+        message: 'District not found'
+      });
+    }
+
+    // 3. Find Province by name
+    const provinceDoc = await Province.findOne({
+      name: { $regex: `^${province}$`, $options: 'i' }
+    });
+
+    if (!provinceDoc) {
+      return res.status(404).json({
+        success: false,
+        message: 'Province not found'
+      });
+    }
+
+    // 4. Validate relationship (VERY IMPORTANT)
+    if (districtDoc.province.toString() !== provinceDoc._id.toString()) {
+      return res.status(400).json({
+        success: false,
+        message: 'District does not belong to the given province'
+      });
+    }
+
+    // 5. Replace values with ObjectIds
+    req.body.driver = driverDoc._id;
+    req.body.district = districtDoc._id;
+    req.body.province = provinceDoc._id;
+
+    // 6. Create tuk tuk
     const tuktuk = await Tuktuk.create(req.body);
-    res.status(201).json({ success: true, data });
+
+    const populatedTuktuk = await Tuktuk.findById(tuktuk._id)
+      .populate('driver')
+      .populate('district')
+      .populate('province');
+
+    res.status(201).json({
+      success: true,
+      data: populatedTuktuk
+    });
+
   } catch (error) {
     next(error);
   }
@@ -103,7 +163,7 @@ export const updateTuktuk = async (req, res, next) => {
       return res.status(404).json({ success: false, message: 'Tuk-Tuk not found' });
     }
 
-    res.status(200).json({ success: true, data });
+    res.status(200).json({ success: true, data: tuktuk });
   } catch (error) {
     next(error);
   }

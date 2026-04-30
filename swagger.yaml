@@ -282,10 +282,10 @@ components:
         fullName:
           type: string
           example: Kasun Perera
-        nationalId:
+        nic:
           type: string
           example: 195000001V
-        licenseNumber:
+        licenseNo:
           type: string
           example: B1000001
         phone:
@@ -306,18 +306,18 @@ components:
       type: object
       required:
         - fullName
-        - nationalId
-        - licenseNumber
+        - nic
+        - licenseNo
         - district
         - province
       properties:
         fullName:
           type: string
           example: Nimal Silva
-        nationalId:
+        nic:
           type: string
           example: 199512345678V
-        licenseNumber:
+        licenseNo:
           type: string
           example: B1234567
         phone:
@@ -849,33 +849,6 @@ tags:
 
 #paths for each section
 paths:
-
- #health check
-  /health:
-    get:
-      summary: Health check — verify server is running
-      description: Public endpoint. No authentication required.
-      operationId: healthCheck
-      security: []
-      tags:
-        - Authentication
-      responses:
-        '200':
-          description: Server is running
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  success:
-                    type: boolean
-                    example: true
-                  status:
-                    type: string
-                    example: UP
-                  timestamp:
-                    type: string
-                    format: date-time
 
  #authentication 
   /auth/login:
@@ -1421,8 +1394,8 @@ paths:
               $ref: '#/components/schemas/CreateDriverRequest'
             example:
               fullName: Nimal Silva
-              nationalId: 199512345678V
-              licenseNumber: B1234567
+              nic: 199512345678V
+              licenseNo: B1234567
               phone: "0771234567"
               district: Galle
               province: Southern
@@ -1436,7 +1409,7 @@ paths:
         '409':
           $ref: '#/components/responses/Conflict'
 
-  /drivers/{nationalId}:
+  /drivers/{nic}:
     get:
       summary: Get a single driver by ID
       operationId: getDriver
@@ -1444,7 +1417,7 @@ paths:
         - Drivers
       parameters:
         - in: path
-          name: nationalId
+          name: nic
           required: true
           schema:
             type: string
@@ -1475,7 +1448,7 @@ paths:
         - Drivers
       parameters:
         - in: path
-          name: nationalId
+          name: nic
           required: true
           schema:
             type: string
@@ -1514,7 +1487,7 @@ paths:
         - Drivers
       parameters:
         - in: path
-          name: nationalId
+          name: nic
           required: true
           schema:
             type: string
@@ -1843,7 +1816,7 @@ paths:
         '403':
           $ref: '#/components/responses/Forbidden'
 
-  /alerts/suspicious/{districtName}:
+  /alerts/suspicious/district/{districtName}:
     get:
       summary: Get all suspicious vehicles in a district
       description: |
@@ -1888,7 +1861,7 @@ paths:
         '403':
           $ref: '#/components/responses/Forbidden'
 
-  /alerts/suspicious/{provinceName}:
+  /alerts/suspicious/province/{provinceName}:
     get:
       summary: Get all suspicious vehicles in a province
       description: |

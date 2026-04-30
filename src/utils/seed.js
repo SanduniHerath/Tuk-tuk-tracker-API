@@ -115,7 +115,7 @@ const seedDB = async () => {
 
       vehiclesToInsert.push({
         _id: vehicleId,
-        registrationNo: `REG${100 + i}`,
+        registrationNumber: `REG${100 + i}`,
         driver: driverId,
         district: district._id,
         province: district.province,

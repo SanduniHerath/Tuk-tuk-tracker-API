@@ -4,6 +4,8 @@ import { protect, authorize } from '../middleware/auth.js';//import security mid
 
 const router = express.Router();
 
+
+
 router.post('/register', protect, authorize('hq_admin'), register);
 
 router.get('/getUsers', protect, authorize('hq_admin'), getAllUsers);
@@ -16,6 +18,6 @@ router.delete('/delete/:username', protect, authorize('hq_admin'), deleteUser);
 
 router.post('/login', login);
 
-router.get('/me', protect, getMe);
+router.get('/current-user', protect, getMe);
 
 export default router;

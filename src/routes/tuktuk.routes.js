@@ -15,7 +15,7 @@ router.get('/:regNo', getTuktuk);
 
 router.post('/', authorize('hq_admin', 'provincial_officer'), createTuktuk);
 
-router.put('/:regNo', authorize('hq_admin', 'provincial_officer', 'station_officer'), updateTuktuk);
+router.patch('/:regNo', authorize('hq_admin', 'provincial_officer', 'station_officer'), updateTuktuk);
 
 router.delete('/:regNo', authorize('hq_admin'), deleteTuktuk);
 

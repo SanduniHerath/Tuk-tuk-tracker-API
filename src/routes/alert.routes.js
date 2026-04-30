@@ -13,13 +13,13 @@ router.get(
 );
 
 router.get(
-    '/suspicious/:districtName',
+    '/suspicious/district/:districtName',
     authorize('hq_admin', 'provincial_officer', 'station_officer'),
     getSuspiciousVehiclesByDistrict
 );
 
 router.get(
-    '/suspicious/:provinceName',
+    '/suspicious/province/:provinceName',
     authorize('hq_admin', 'provincial_officer', 'station_officer'),
     getSuspiciousVehiclesByProvince
 );

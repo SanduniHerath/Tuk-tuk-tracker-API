@@ -1,5 +1,4 @@
-import LocationPing from '../models/locationPing.js';
-import Tuktuk from '../models/tuktuk.js';
+import { LocationPing, Tuktuk, District, Province } from '../models/index.js';
 
 //submit ping is the main endpoint where GPS devices send their location data
 //only gps device has access to this endpoint
@@ -57,7 +56,7 @@ export const getAllLatestLocations = async (req, res, next) => {
       //joining with the vehicle collection
       {
         $lookup: {
-          from: 'vehicles',
+          from: 'tuktuks',
           localField: 'vehicle',
           foreignField: '_id',
           as: 'vehicle'
@@ -112,10 +111,10 @@ export const getAllLatestLocations = async (req, res, next) => {
   }
 };
 
-//get latest location for a tuktuk by using the vehicle ID
+//get latest location for a tuktuk by using the tuktuk's regno
 export const getLatestLocation = async (req, res, next) => {
   try {
-    const vehicleDoc = await Vehicle.findOne({
+    const vehicleDoc = await Tuktuk.findOne({
       registrationNumber: req.params.regNo
     });
 
@@ -144,8 +143,23 @@ export const getHistory = async (req, res, next) => {
   try {
     const { from, to } = req.query;
 
-    const vehicleDoc = await Vehicle.findOne({
-      registrationNumber: req.params.regNo
+    //validate date
+    if (from && isNaN(Date.parse(from))) {
+      return res.status(400).json({
+        success: false,
+        message: 'Invalid "from" date format'
+      });
+    }
+
+    if (to && isNaN(Date.parse(to))) {
+      return res.status(400).json({
+        success: false,
+        message: 'Invalid "to" date format'
+      });
+    }
+
+    const vehicleDoc = await Tuktuk.findOne({
+      registrationNumber: req.params.regNo.toUpperCase().trim()
     });
 
     if (!vehicleDoc) {
@@ -163,13 +177,34 @@ export const getHistory = async (req, res, next) => {
       if (to) filter.timestamp.$lte = new Date(to);
     }
 
-    //here I fetch the location history
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const skip = (page - 1) * limit;
+
+    //query
     const history = await LocationPing.find(filter)
       .sort('-timestamp')
-      .limit(100);
+      .skip(skip)
+      .limit(limit)
+      .populate('vehicle', 'registrationNumber district province');
 
+    //get total count
+    const total = await LocationPing.countDocuments(filter);
+
+    if (!history.length) {
+      return res.status(404).json({
+        success: false,
+        message: 'No location history found'
+      });
+    }
+
+    //response
     res.status(200).json({
       success: true,
+      page,
+      limit,
+      total,
+      pages: Math.ceil(total / limit),
       results: history.length,
       data: history
     });
@@ -194,7 +229,7 @@ export const getDistrictLatest = async (req, res, next) => {
     }
 
     //get vehicles in that district
-    const vehicles = await Vehicle.find({
+    const vehicles = await Tuktuk.find({
       district: districtDoc._id
     }).select('_id');
 
@@ -255,7 +290,7 @@ export const getSuspiciousVehicles = async (req, res, next) => {
 
     //if role scoping is applied, we need to find the vehicles that fall under the scope first and then filter pings by those vehicle IDs
     if (Object.keys(vehicleFilter).length > 0) {
-      const scopedVehicles = await Vehicle.find(vehicleFilter).select('_id');
+      const scopedVehicles = await Tuktuk.find(vehicleFilter).select('_id');
       const scopedIds = scopedVehicles.map(v => v._id);
       matchFilter.vehicle = { $in: scopedIds };
     }
@@ -291,7 +326,7 @@ export const getSuspiciousVehicles = async (req, res, next) => {
       //lookup == left join in SQL
       {
         $lookup: {
-          from: 'vehicles',          //mongodb collection name
+          from: 'tuktuks',          //mongodb collection name
           localField: '_id',         //field from the previous group stage (vehicle id)
           foreignField: '_id',       //field in the Vehicle collection to match with (vehicle id)
           as: 'vehicleDetails',      //output array name
@@ -413,7 +448,7 @@ export const getSuspiciousVehiclesByDistrict = async (req, res, next) => {
     }
 
     //find tuk tuks in that district
-    const vehicles = await Vehicle.find({ district: district._id }).select('_id');
+    const vehicles = await Tuktuk.find({ district: district._id }).select('_id');
 
     const vehicleIds = vehicles.map(v => v._id);
 
@@ -421,7 +456,14 @@ export const getSuspiciousVehiclesByDistrict = async (req, res, next) => {
     const suspiciousPings = await LocationPing.find({
       vehicle: { $in: vehicleIds },
       isAnomaly: true
-    });
+    })
+    .populate({
+  path: 'vehicle',
+  populate: [
+    { path: 'district' },
+    { path: 'province' }
+  ]
+});
 
     res.status(200).json({
       success: true,
@@ -445,7 +487,7 @@ export const getSuspiciousVehiclesByProvince = async (req, res, next) => {
       //join tuktuk
       {
         $lookup: {
-          from: 'vehicles',
+          from: 'tuktuks',
           localField: 'vehicle',
           foreignField: '_id',
           as: 'vehicle'

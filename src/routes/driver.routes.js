@@ -11,10 +11,10 @@ router.get('/', getDrivers);
 
 router.get('/:nic', getDriver);
 
-router.post('/', protect, authorize('hq_admin', 'tuk_tuk_operator'), createDriver);
+router.post('/', protect, authorize('hq_admin', 'station_officer'), createDriver);
 
-router.put('/:nic', protect, authorize('hq_admin', 'tuk_tuk_operator'), updateDriver);
+router.patch('/:nic', protect, authorize('hq_admin', 'station_officer'), updateDriver);
 
-router.delete('/:nic', protect, authorize('hq_admin', 'tuk_tuk_operator'), deleteDriver);
+router.delete('/:nic', protect, authorize('hq_admin'), deleteDriver);
 
 export default router;
