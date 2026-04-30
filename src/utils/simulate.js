@@ -194,7 +194,7 @@ const generateSuspiciousPing = (vehicle, timestamp) => {
         isAnomaly: true,
       };
     }
-s
+
     case 'SPEEDING': {
       if (hour < 6 || hour >= 22) return null;
 
