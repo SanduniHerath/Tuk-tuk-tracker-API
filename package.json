@@ -8,6 +8,7 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "seed": "node src/utils/seed.js",
+    "simulate": "node src/utils/simulate.js",
     "lint": "eslint .",
     "test": "cross-env NODE_ENV=test mocha --config .mocharc.cjs --timeout 15000 --exit",
     "test:watch": "cross-env NODE_ENV=test mocha --config .mocharc.cjs --timeout 15000 --watch",
