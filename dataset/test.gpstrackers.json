@@ -1,0 +1,3400 @@
+[{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21e6"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb21e7"
+  },
+  "deviceId": "DEV-10001",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21e9"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb21ea"
+  },
+  "deviceId": "DEV-10002",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21ec"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb21ed"
+  },
+  "deviceId": "DEV-10003",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21ef"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb21f0"
+  },
+  "deviceId": "DEV-10004",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21f2"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb21f3"
+  },
+  "deviceId": "DEV-10005",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21f5"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb21f6"
+  },
+  "deviceId": "DEV-10006",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21f8"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb21f9"
+  },
+  "deviceId": "DEV-10007",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21fb"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb21fc"
+  },
+  "deviceId": "DEV-10008",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21fe"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb21ff"
+  },
+  "deviceId": "DEV-10009",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2201"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2202"
+  },
+  "deviceId": "DEV-10010",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2204"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2205"
+  },
+  "deviceId": "DEV-10011",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2207"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2208"
+  },
+  "deviceId": "DEV-10012",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb220a"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb220b"
+  },
+  "deviceId": "DEV-10013",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb220d"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb220e"
+  },
+  "deviceId": "DEV-10014",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2210"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2211"
+  },
+  "deviceId": "DEV-10015",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2213"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2214"
+  },
+  "deviceId": "DEV-10016",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2216"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2217"
+  },
+  "deviceId": "DEV-10017",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2219"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb221a"
+  },
+  "deviceId": "DEV-10018",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb221c"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb221d"
+  },
+  "deviceId": "DEV-10019",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb221f"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2220"
+  },
+  "deviceId": "DEV-10020",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2222"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2223"
+  },
+  "deviceId": "DEV-10021",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2225"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2226"
+  },
+  "deviceId": "DEV-10022",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2228"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2229"
+  },
+  "deviceId": "DEV-10023",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb222b"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb222c"
+  },
+  "deviceId": "DEV-10024",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb222e"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb222f"
+  },
+  "deviceId": "DEV-10025",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2231"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2232"
+  },
+  "deviceId": "DEV-10026",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2234"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2235"
+  },
+  "deviceId": "DEV-10027",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2237"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2238"
+  },
+  "deviceId": "DEV-10028",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb223a"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb223b"
+  },
+  "deviceId": "DEV-10029",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb223d"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb223e"
+  },
+  "deviceId": "DEV-10030",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2240"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2241"
+  },
+  "deviceId": "DEV-10031",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2243"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2244"
+  },
+  "deviceId": "DEV-10032",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2246"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2247"
+  },
+  "deviceId": "DEV-10033",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2249"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb224a"
+  },
+  "deviceId": "DEV-10034",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb224c"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb224d"
+  },
+  "deviceId": "DEV-10035",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb224f"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2250"
+  },
+  "deviceId": "DEV-10036",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2252"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2253"
+  },
+  "deviceId": "DEV-10037",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2255"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2256"
+  },
+  "deviceId": "DEV-10038",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2258"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2259"
+  },
+  "deviceId": "DEV-10039",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb225b"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb225c"
+  },
+  "deviceId": "DEV-10040",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb225e"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb225f"
+  },
+  "deviceId": "DEV-10041",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2261"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2262"
+  },
+  "deviceId": "DEV-10042",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2264"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2265"
+  },
+  "deviceId": "DEV-10043",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2267"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2268"
+  },
+  "deviceId": "DEV-10044",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb226a"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb226b"
+  },
+  "deviceId": "DEV-10045",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb226d"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb226e"
+  },
+  "deviceId": "DEV-10046",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2270"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2271"
+  },
+  "deviceId": "DEV-10047",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2273"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2274"
+  },
+  "deviceId": "DEV-10048",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2276"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2277"
+  },
+  "deviceId": "DEV-10049",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2279"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb227a"
+  },
+  "deviceId": "DEV-10050",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb227c"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb227d"
+  },
+  "deviceId": "DEV-10051",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb227f"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2280"
+  },
+  "deviceId": "DEV-10052",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2282"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2283"
+  },
+  "deviceId": "DEV-10053",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2285"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2286"
+  },
+  "deviceId": "DEV-10054",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2288"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2289"
+  },
+  "deviceId": "DEV-10055",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb228b"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb228c"
+  },
+  "deviceId": "DEV-10056",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb228e"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb228f"
+  },
+  "deviceId": "DEV-10057",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2291"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2292"
+  },
+  "deviceId": "DEV-10058",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2294"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2295"
+  },
+  "deviceId": "DEV-10059",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2297"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2298"
+  },
+  "deviceId": "DEV-10060",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb229a"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb229b"
+  },
+  "deviceId": "DEV-10061",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb229d"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb229e"
+  },
+  "deviceId": "DEV-10062",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22a0"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22a1"
+  },
+  "deviceId": "DEV-10063",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22a3"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22a4"
+  },
+  "deviceId": "DEV-10064",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22a6"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22a7"
+  },
+  "deviceId": "DEV-10065",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22a9"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22aa"
+  },
+  "deviceId": "DEV-10066",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22ac"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22ad"
+  },
+  "deviceId": "DEV-10067",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22af"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22b0"
+  },
+  "deviceId": "DEV-10068",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22b2"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22b3"
+  },
+  "deviceId": "DEV-10069",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22b5"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22b6"
+  },
+  "deviceId": "DEV-10070",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22b8"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22b9"
+  },
+  "deviceId": "DEV-10071",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22bb"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22bc"
+  },
+  "deviceId": "DEV-10072",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22be"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22bf"
+  },
+  "deviceId": "DEV-10073",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22c1"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22c2"
+  },
+  "deviceId": "DEV-10074",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22c4"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22c5"
+  },
+  "deviceId": "DEV-10075",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22c7"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22c8"
+  },
+  "deviceId": "DEV-10076",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22ca"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22cb"
+  },
+  "deviceId": "DEV-10077",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22cd"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22ce"
+  },
+  "deviceId": "DEV-10078",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22d0"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22d1"
+  },
+  "deviceId": "DEV-10079",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22d3"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22d4"
+  },
+  "deviceId": "DEV-10080",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22d6"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22d7"
+  },
+  "deviceId": "DEV-10081",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22d9"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22da"
+  },
+  "deviceId": "DEV-10082",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22dc"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22dd"
+  },
+  "deviceId": "DEV-10083",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22df"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22e0"
+  },
+  "deviceId": "DEV-10084",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22e2"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22e3"
+  },
+  "deviceId": "DEV-10085",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22e5"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22e6"
+  },
+  "deviceId": "DEV-10086",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22e8"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22e9"
+  },
+  "deviceId": "DEV-10087",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22eb"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22ec"
+  },
+  "deviceId": "DEV-10088",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22ee"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22ef"
+  },
+  "deviceId": "DEV-10089",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22f1"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22f2"
+  },
+  "deviceId": "DEV-10090",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22f4"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22f5"
+  },
+  "deviceId": "DEV-10091",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22f7"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22f8"
+  },
+  "deviceId": "DEV-10092",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22fa"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22fb"
+  },
+  "deviceId": "DEV-10093",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22fd"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb22fe"
+  },
+  "deviceId": "DEV-10094",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2300"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2301"
+  },
+  "deviceId": "DEV-10095",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2303"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2304"
+  },
+  "deviceId": "DEV-10096",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2306"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2307"
+  },
+  "deviceId": "DEV-10097",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2309"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb230a"
+  },
+  "deviceId": "DEV-10098",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb230c"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb230d"
+  },
+  "deviceId": "DEV-10099",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb230f"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2310"
+  },
+  "deviceId": "DEV-10100",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2312"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2313"
+  },
+  "deviceId": "DEV-10101",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2315"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2316"
+  },
+  "deviceId": "DEV-10102",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2318"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2319"
+  },
+  "deviceId": "DEV-10103",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb231b"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb231c"
+  },
+  "deviceId": "DEV-10104",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb231e"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb231f"
+  },
+  "deviceId": "DEV-10105",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2321"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2322"
+  },
+  "deviceId": "DEV-10106",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2324"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2325"
+  },
+  "deviceId": "DEV-10107",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2327"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2328"
+  },
+  "deviceId": "DEV-10108",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb232a"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb232b"
+  },
+  "deviceId": "DEV-10109",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb232d"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb232e"
+  },
+  "deviceId": "DEV-10110",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2330"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2331"
+  },
+  "deviceId": "DEV-10111",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2333"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2334"
+  },
+  "deviceId": "DEV-10112",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2336"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2337"
+  },
+  "deviceId": "DEV-10113",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2339"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb233a"
+  },
+  "deviceId": "DEV-10114",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb233c"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb233d"
+  },
+  "deviceId": "DEV-10115",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb233f"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2340"
+  },
+  "deviceId": "DEV-10116",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2342"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2343"
+  },
+  "deviceId": "DEV-10117",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2345"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2346"
+  },
+  "deviceId": "DEV-10118",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2348"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2349"
+  },
+  "deviceId": "DEV-10119",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb234b"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb234c"
+  },
+  "deviceId": "DEV-10120",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb234e"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb234f"
+  },
+  "deviceId": "DEV-10121",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2351"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2352"
+  },
+  "deviceId": "DEV-10122",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2354"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2355"
+  },
+  "deviceId": "DEV-10123",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2357"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2358"
+  },
+  "deviceId": "DEV-10124",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb235a"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb235b"
+  },
+  "deviceId": "DEV-10125",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb235d"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb235e"
+  },
+  "deviceId": "DEV-10126",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2360"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2361"
+  },
+  "deviceId": "DEV-10127",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2363"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2364"
+  },
+  "deviceId": "DEV-10128",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2366"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2367"
+  },
+  "deviceId": "DEV-10129",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2369"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb236a"
+  },
+  "deviceId": "DEV-10130",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb236c"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb236d"
+  },
+  "deviceId": "DEV-10131",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb236f"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2370"
+  },
+  "deviceId": "DEV-10132",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2372"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2373"
+  },
+  "deviceId": "DEV-10133",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2375"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2376"
+  },
+  "deviceId": "DEV-10134",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2378"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2379"
+  },
+  "deviceId": "DEV-10135",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb237b"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb237c"
+  },
+  "deviceId": "DEV-10136",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb237e"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb237f"
+  },
+  "deviceId": "DEV-10137",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2381"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2382"
+  },
+  "deviceId": "DEV-10138",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2384"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2385"
+  },
+  "deviceId": "DEV-10139",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2387"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2388"
+  },
+  "deviceId": "DEV-10140",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb238a"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb238b"
+  },
+  "deviceId": "DEV-10141",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb238d"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb238e"
+  },
+  "deviceId": "DEV-10142",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2390"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2391"
+  },
+  "deviceId": "DEV-10143",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2393"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2394"
+  },
+  "deviceId": "DEV-10144",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2396"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2397"
+  },
+  "deviceId": "DEV-10145",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2399"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb239a"
+  },
+  "deviceId": "DEV-10146",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb239c"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb239d"
+  },
+  "deviceId": "DEV-10147",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb239f"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23a0"
+  },
+  "deviceId": "DEV-10148",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23a2"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23a3"
+  },
+  "deviceId": "DEV-10149",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23a5"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23a6"
+  },
+  "deviceId": "DEV-10150",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23a8"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23a9"
+  },
+  "deviceId": "DEV-10151",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23ab"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23ac"
+  },
+  "deviceId": "DEV-10152",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23ae"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23af"
+  },
+  "deviceId": "DEV-10153",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23b1"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23b2"
+  },
+  "deviceId": "DEV-10154",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23b4"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23b5"
+  },
+  "deviceId": "DEV-10155",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23b7"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23b8"
+  },
+  "deviceId": "DEV-10156",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23ba"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23bb"
+  },
+  "deviceId": "DEV-10157",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23bd"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23be"
+  },
+  "deviceId": "DEV-10158",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23c0"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23c1"
+  },
+  "deviceId": "DEV-10159",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23c3"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23c4"
+  },
+  "deviceId": "DEV-10160",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23c6"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23c7"
+  },
+  "deviceId": "DEV-10161",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23c9"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23ca"
+  },
+  "deviceId": "DEV-10162",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23cc"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23cd"
+  },
+  "deviceId": "DEV-10163",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23cf"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23d0"
+  },
+  "deviceId": "DEV-10164",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23d2"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23d3"
+  },
+  "deviceId": "DEV-10165",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23d5"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23d6"
+  },
+  "deviceId": "DEV-10166",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23d8"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23d9"
+  },
+  "deviceId": "DEV-10167",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23db"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23dc"
+  },
+  "deviceId": "DEV-10168",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23de"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23df"
+  },
+  "deviceId": "DEV-10169",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23e1"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23e2"
+  },
+  "deviceId": "DEV-10170",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23e4"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23e5"
+  },
+  "deviceId": "DEV-10171",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23e7"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23e8"
+  },
+  "deviceId": "DEV-10172",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23ea"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23eb"
+  },
+  "deviceId": "DEV-10173",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23ed"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23ee"
+  },
+  "deviceId": "DEV-10174",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23f0"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23f1"
+  },
+  "deviceId": "DEV-10175",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23f3"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23f4"
+  },
+  "deviceId": "DEV-10176",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23f6"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23f7"
+  },
+  "deviceId": "DEV-10177",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.077Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23f9"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23fa"
+  },
+  "deviceId": "DEV-10178",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23fc"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb23fd"
+  },
+  "deviceId": "DEV-10179",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23ff"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2400"
+  },
+  "deviceId": "DEV-10180",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2402"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2403"
+  },
+  "deviceId": "DEV-10181",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2405"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2406"
+  },
+  "deviceId": "DEV-10182",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2408"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2409"
+  },
+  "deviceId": "DEV-10183",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb240b"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb240c"
+  },
+  "deviceId": "DEV-10184",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb240e"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb240f"
+  },
+  "deviceId": "DEV-10185",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2411"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2412"
+  },
+  "deviceId": "DEV-10186",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2414"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2415"
+  },
+  "deviceId": "DEV-10187",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2417"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2418"
+  },
+  "deviceId": "DEV-10188",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb241a"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb241b"
+  },
+  "deviceId": "DEV-10189",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb241d"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb241e"
+  },
+  "deviceId": "DEV-10190",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2420"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2421"
+  },
+  "deviceId": "DEV-10191",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2423"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2424"
+  },
+  "deviceId": "DEV-10192",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2426"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2427"
+  },
+  "deviceId": "DEV-10193",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2429"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb242a"
+  },
+  "deviceId": "DEV-10194",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb242c"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb242d"
+  },
+  "deviceId": "DEV-10195",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb242f"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2430"
+  },
+  "deviceId": "DEV-10196",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2432"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2433"
+  },
+  "deviceId": "DEV-10197",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2435"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2436"
+  },
+  "deviceId": "DEV-10198",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2438"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb2439"
+  },
+  "deviceId": "DEV-10199",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb243b"
+  },
+  "vehicle": {
+    "$oid": "69f42dc0a2184037f1cb243c"
+  },
+  "deviceId": "DEV-10200",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.078Z"
+  }
+}]

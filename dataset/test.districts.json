@@ -1,0 +1,425 @@
+[{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "name": "Colombo",
+  "code": "COL",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21ac"
+  },
+  "name": "Gampaha",
+  "code": "GAM",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21ad"
+  },
+  "name": "Kalutara",
+  "code": "KAL",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21ae"
+  },
+  "name": "Kandy",
+  "code": "KND",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21af"
+  },
+  "name": "Matale",
+  "code": "MTL",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21b0"
+  },
+  "name": "Nuwara Eliya",
+  "code": "NPR",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21b1"
+  },
+  "name": "Galle",
+  "code": "GAL",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21b2"
+  },
+  "name": "Matara",
+  "code": "MTR",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21b3"
+  },
+  "name": "Hambantota",
+  "code": "HBT",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21b4"
+  },
+  "name": "Jaffna",
+  "code": "JAF",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21b5"
+  },
+  "name": "Kilinochchi",
+  "code": "KNL",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21b6"
+  },
+  "name": "Mannar",
+  "code": "MNR",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21b7"
+  },
+  "name": "Vavuniya",
+  "code": "VVN",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21b8"
+  },
+  "name": "Mullaitivu",
+  "code": "MLT",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21b9"
+  },
+  "name": "Batticaloa",
+  "code": "BTC",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21ba"
+  },
+  "name": "Ampara",
+  "code": "AMP",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21bb"
+  },
+  "name": "Trincomalee",
+  "code": "TRK",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21bc"
+  },
+  "name": "Kurunegala",
+  "code": "KGN",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21bd"
+  },
+  "name": "Puttalam",
+  "code": "PTL",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21be"
+  },
+  "name": "Anuradhapura",
+  "code": "AD",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21bf"
+  },
+  "name": "Polonnaruwa",
+  "code": "PLP",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21c0"
+  },
+  "name": "Badulla",
+  "code": "BDA",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21c1"
+  },
+  "name": "Moneragala",
+  "code": "MON",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21c2"
+  },
+  "name": "Ratnapura",
+  "code": "RT",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21c3"
+  },
+  "name": "Kegalle",
+  "code": "KGE",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.810Z"
+  }
+}]

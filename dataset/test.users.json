@@ -1,0 +1,77 @@
+[{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21df"
+  },
+  "username": "admin",
+  "password": "$2a$12$N7zG3wKdZS7dlGTqtFku5.Kec1VgAUcRKSEFia1j9sMbkvLc48KJ6",
+  "fullname": "HQ Master Admin",
+  "role": "hq_admin",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.997Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.997Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21e0"
+  },
+  "username": "wp_officer",
+  "password": "$2a$12$3LUHLg4YIYEhXm.jnf5b4uiuZ8b/ySeBuiNEyrokSaAiDiQYCHvAi",
+  "fullname": "Western Province Officer",
+  "role": "provincial_officer",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.997Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.997Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21e1"
+  },
+  "username": "colombo_officer",
+  "password": "$2a$12$nAtgq8e6UQHlIAoG9Yp.z.w9Jh0IgY0wcnKh9hXFaWPCU26Pkj4J2",
+  "fullname": "Colombo Station Officer",
+  "role": "station_officer",
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.997Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.997Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f42dc1a2184037f1cb2698"
+  },
+  "username": "gps_device",
+  "password": "$2a$12$FI7FSqo.LE7ej4rJ..Ssc.G4AfGLOod4LjcS51IqScfttsMQbRAz.",
+  "fullname": "GPS Device",
+  "role": "gps_device",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:17.159Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:17.159Z"
+  },
+  "__v": 0
+}]
