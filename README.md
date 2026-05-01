@@ -105,6 +105,14 @@ Once the server is running, you can access the interactive API documentation at:
 
 ---
 
+## Live API
+Base URL: https://tuk-tuk-tracker-api-cobsccomp242p-016.onrender.com
+
+Health Check: https://tuk-tuk-tracker-api-cobsccomp242p-016.onrender.com/health
+
+API Docs: https://tuk-tuk-tracker-api-cobsccomp242p-016.onrender.com/api-docs
+
+
 ## Security Architecture
 - **JWT Protection**: All sensitive routes are guarded by JWT verification.
 - **Role Scoping**: Middlewares automatically filter query results based on the logged-in officer's jurisdiction.
