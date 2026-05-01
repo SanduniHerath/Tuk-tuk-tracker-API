@@ -1,0 +1,500 @@
+[{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21c5"
+  },
+  "name": "Colombo Central Police Station",
+  "policeStationCode": "COL-101",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.886Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.886Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21c6"
+  },
+  "name": "Gampaha Central Police Station",
+  "policeStationCode": "GAM-102",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ac"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21c7"
+  },
+  "name": "Kalutara Central Police Station",
+  "policeStationCode": "KAL-103",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ad"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21c8"
+  },
+  "name": "Kandy Central Police Station",
+  "policeStationCode": "KAN-104",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ae"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21c9"
+  },
+  "name": "Matale Central Police Station",
+  "policeStationCode": "MAT-105",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21af"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21ca"
+  },
+  "name": "Nuwara Eliya Central Police Station",
+  "policeStationCode": "NUW-106",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21cb"
+  },
+  "name": "Galle Central Police Station",
+  "policeStationCode": "GAL-107",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21cc"
+  },
+  "name": "Matara Central Police Station",
+  "policeStationCode": "MAT-108",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21cd"
+  },
+  "name": "Hambantota Central Police Station",
+  "policeStationCode": "HAM-109",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21ce"
+  },
+  "name": "Jaffna Central Police Station",
+  "policeStationCode": "JAF-110",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b4"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21cf"
+  },
+  "name": "Kilinochchi Central Police Station",
+  "policeStationCode": "KIL-111",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b5"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21d0"
+  },
+  "name": "Mannar Central Police Station",
+  "policeStationCode": "MAN-112",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b6"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21d1"
+  },
+  "name": "Vavuniya Central Police Station",
+  "policeStationCode": "VAV-113",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b7"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21d2"
+  },
+  "name": "Mullaitivu Central Police Station",
+  "policeStationCode": "MUL-114",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b8"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21d3"
+  },
+  "name": "Batticaloa Central Police Station",
+  "policeStationCode": "BAT-115",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b9"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21d4"
+  },
+  "name": "Ampara Central Police Station",
+  "policeStationCode": "AMP-116",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ba"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21d5"
+  },
+  "name": "Trincomalee Central Police Station",
+  "policeStationCode": "TRI-117",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bb"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21d6"
+  },
+  "name": "Kurunegala Central Police Station",
+  "policeStationCode": "KUR-118",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bc"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21d7"
+  },
+  "name": "Puttalam Central Police Station",
+  "policeStationCode": "PUT-119",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bd"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21d8"
+  },
+  "name": "Anuradhapura Central Police Station",
+  "policeStationCode": "ANU-120",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21be"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21d9"
+  },
+  "name": "Polonnaruwa Central Police Station",
+  "policeStationCode": "POL-121",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bf"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21da"
+  },
+  "name": "Badulla Central Police Station",
+  "policeStationCode": "BAD-122",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21db"
+  },
+  "name": "Moneragala Central Police Station",
+  "policeStationCode": "MON-123",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.888Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.888Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21dc"
+  },
+  "name": "Ratnapura Central Police Station",
+  "policeStationCode": "RAT-124",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.888Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.888Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dbea2184037f1cb21dd"
+  },
+  "name": "Kegalle Central Police Station",
+  "policeStationCode": "KEG-125",
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:14.888Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:14.888Z"
+  }
+}]

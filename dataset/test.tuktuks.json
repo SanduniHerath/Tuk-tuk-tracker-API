@@ -1,0 +1,5400 @@
+[{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21e7"
+  },
+  "registrationNumber": "REG101",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb21e5"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ac"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10001",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21ea"
+  },
+  "registrationNumber": "REG102",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb21e8"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ad"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10002",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21ed"
+  },
+  "registrationNumber": "REG103",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb21eb"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ae"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10003",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21f0"
+  },
+  "registrationNumber": "REG104",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb21ee"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21af"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10004",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21f3"
+  },
+  "registrationNumber": "REG105",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb21f1"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10005",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21f6"
+  },
+  "registrationNumber": "REG106",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb21f4"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10006",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21f9"
+  },
+  "registrationNumber": "REG107",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb21f7"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10007",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21fc"
+  },
+  "registrationNumber": "REG108",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb21fa"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10008",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb21ff"
+  },
+  "registrationNumber": "REG109",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb21fd"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b4"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10009",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2202"
+  },
+  "registrationNumber": "REG110",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2200"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b5"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10010",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2205"
+  },
+  "registrationNumber": "REG111",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2203"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b6"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10011",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2208"
+  },
+  "registrationNumber": "REG112",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2206"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b7"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10012",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb220b"
+  },
+  "registrationNumber": "REG113",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2209"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b8"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10013",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb220e"
+  },
+  "registrationNumber": "REG114",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb220c"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b9"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10014",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2211"
+  },
+  "registrationNumber": "REG115",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb220f"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ba"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10015",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2214"
+  },
+  "registrationNumber": "REG116",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2212"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bb"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10016",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2217"
+  },
+  "registrationNumber": "REG117",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2215"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bc"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10017",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb221a"
+  },
+  "registrationNumber": "REG118",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2218"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bd"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10018",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb221d"
+  },
+  "registrationNumber": "REG119",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb221b"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21be"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10019",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2220"
+  },
+  "registrationNumber": "REG120",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb221e"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bf"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10020",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2223"
+  },
+  "registrationNumber": "REG121",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2221"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10021",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2226"
+  },
+  "registrationNumber": "REG122",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2224"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10022",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2229"
+  },
+  "registrationNumber": "REG123",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2227"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10023",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb222c"
+  },
+  "registrationNumber": "REG124",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb222a"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10024",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb222f"
+  },
+  "registrationNumber": "REG125",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb222d"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10025",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2232"
+  },
+  "registrationNumber": "REG126",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2230"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ac"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10026",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2235"
+  },
+  "registrationNumber": "REG127",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2233"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ad"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10027",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2238"
+  },
+  "registrationNumber": "REG128",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2236"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ae"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10028",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb223b"
+  },
+  "registrationNumber": "REG129",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2239"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21af"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10029",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb223e"
+  },
+  "registrationNumber": "REG130",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb223c"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10030",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2241"
+  },
+  "registrationNumber": "REG131",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb223f"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10031",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2244"
+  },
+  "registrationNumber": "REG132",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2242"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10032",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2247"
+  },
+  "registrationNumber": "REG133",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2245"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10033",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb224a"
+  },
+  "registrationNumber": "REG134",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2248"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b4"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10034",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb224d"
+  },
+  "registrationNumber": "REG135",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb224b"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b5"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10035",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2250"
+  },
+  "registrationNumber": "REG136",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb224e"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b6"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10036",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2253"
+  },
+  "registrationNumber": "REG137",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2251"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b7"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10037",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2256"
+  },
+  "registrationNumber": "REG138",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2254"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b8"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10038",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2259"
+  },
+  "registrationNumber": "REG139",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2257"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b9"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10039",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb225c"
+  },
+  "registrationNumber": "REG140",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb225a"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ba"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10040",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb225f"
+  },
+  "registrationNumber": "REG141",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb225d"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bb"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10041",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2262"
+  },
+  "registrationNumber": "REG142",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2260"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bc"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10042",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2265"
+  },
+  "registrationNumber": "REG143",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2263"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bd"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10043",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2268"
+  },
+  "registrationNumber": "REG144",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2266"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21be"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10044",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb226b"
+  },
+  "registrationNumber": "REG145",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2269"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bf"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10045",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb226e"
+  },
+  "registrationNumber": "REG146",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb226c"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10046",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2271"
+  },
+  "registrationNumber": "REG147",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb226f"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10047",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2274"
+  },
+  "registrationNumber": "REG148",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2272"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10048",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2277"
+  },
+  "registrationNumber": "REG149",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2275"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10049",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb227a"
+  },
+  "registrationNumber": "REG150",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2278"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10050",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb227d"
+  },
+  "registrationNumber": "REG151",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb227b"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ac"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10051",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2280"
+  },
+  "registrationNumber": "REG152",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb227e"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ad"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10052",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2283"
+  },
+  "registrationNumber": "REG153",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2281"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ae"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10053",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2286"
+  },
+  "registrationNumber": "REG154",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2284"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21af"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10054",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2289"
+  },
+  "registrationNumber": "REG155",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2287"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10055",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb228c"
+  },
+  "registrationNumber": "REG156",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb228a"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10056",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb228f"
+  },
+  "registrationNumber": "REG157",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb228d"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10057",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2292"
+  },
+  "registrationNumber": "REG158",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2290"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10058",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2295"
+  },
+  "registrationNumber": "REG159",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2293"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b4"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10059",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2298"
+  },
+  "registrationNumber": "REG160",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2296"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b5"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10060",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb229b"
+  },
+  "registrationNumber": "REG161",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2299"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b6"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10061",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb229e"
+  },
+  "registrationNumber": "REG162",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb229c"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b7"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10062",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22a1"
+  },
+  "registrationNumber": "REG163",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb229f"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b8"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10063",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22a4"
+  },
+  "registrationNumber": "REG164",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22a2"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b9"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10064",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22a7"
+  },
+  "registrationNumber": "REG165",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22a5"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ba"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10065",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22aa"
+  },
+  "registrationNumber": "REG166",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22a8"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bb"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10066",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22ad"
+  },
+  "registrationNumber": "REG167",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22ab"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bc"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10067",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22b0"
+  },
+  "registrationNumber": "REG168",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22ae"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bd"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10068",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22b3"
+  },
+  "registrationNumber": "REG169",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22b1"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21be"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10069",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22b6"
+  },
+  "registrationNumber": "REG170",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22b4"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bf"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10070",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22b9"
+  },
+  "registrationNumber": "REG171",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22b7"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10071",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22bc"
+  },
+  "registrationNumber": "REG172",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22ba"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10072",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22bf"
+  },
+  "registrationNumber": "REG173",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22bd"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10073",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22c2"
+  },
+  "registrationNumber": "REG174",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22c0"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10074",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22c5"
+  },
+  "registrationNumber": "REG175",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22c3"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10075",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22c8"
+  },
+  "registrationNumber": "REG176",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22c6"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ac"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10076",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22cb"
+  },
+  "registrationNumber": "REG177",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22c9"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ad"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10077",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22ce"
+  },
+  "registrationNumber": "REG178",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22cc"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ae"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10078",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22d1"
+  },
+  "registrationNumber": "REG179",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22cf"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21af"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10079",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22d4"
+  },
+  "registrationNumber": "REG180",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22d2"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10080",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22d7"
+  },
+  "registrationNumber": "REG181",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22d5"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10081",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22da"
+  },
+  "registrationNumber": "REG182",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22d8"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10082",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22dd"
+  },
+  "registrationNumber": "REG183",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22db"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10083",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22e0"
+  },
+  "registrationNumber": "REG184",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22de"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b4"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10084",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22e3"
+  },
+  "registrationNumber": "REG185",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22e1"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b5"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10085",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22e6"
+  },
+  "registrationNumber": "REG186",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22e4"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b6"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10086",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22e9"
+  },
+  "registrationNumber": "REG187",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22e7"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b7"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10087",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22ec"
+  },
+  "registrationNumber": "REG188",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22ea"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b8"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10088",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22ef"
+  },
+  "registrationNumber": "REG189",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22ed"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b9"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10089",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22f2"
+  },
+  "registrationNumber": "REG190",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22f0"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ba"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10090",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22f5"
+  },
+  "registrationNumber": "REG191",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22f3"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bb"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10091",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22f8"
+  },
+  "registrationNumber": "REG192",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22f6"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bc"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10092",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22fb"
+  },
+  "registrationNumber": "REG193",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22f9"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bd"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10093",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb22fe"
+  },
+  "registrationNumber": "REG194",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22fc"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21be"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10094",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2301"
+  },
+  "registrationNumber": "REG195",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb22ff"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bf"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10095",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2304"
+  },
+  "registrationNumber": "REG196",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2302"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10096",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2307"
+  },
+  "registrationNumber": "REG197",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2305"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10097",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb230a"
+  },
+  "registrationNumber": "REG198",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2308"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10098",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb230d"
+  },
+  "registrationNumber": "REG199",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb230b"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10099",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2310"
+  },
+  "registrationNumber": "REG200",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb230e"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10100",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2313"
+  },
+  "registrationNumber": "REG201",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2311"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ac"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10101",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2316"
+  },
+  "registrationNumber": "REG202",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2314"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ad"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10102",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2319"
+  },
+  "registrationNumber": "REG203",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2317"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ae"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10103",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb231c"
+  },
+  "registrationNumber": "REG204",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb231a"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21af"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10104",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb231f"
+  },
+  "registrationNumber": "REG205",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb231d"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10105",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2322"
+  },
+  "registrationNumber": "REG206",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2320"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10106",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2325"
+  },
+  "registrationNumber": "REG207",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2323"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10107",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2328"
+  },
+  "registrationNumber": "REG208",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2326"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10108",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb232b"
+  },
+  "registrationNumber": "REG209",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2329"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b4"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10109",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb232e"
+  },
+  "registrationNumber": "REG210",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb232c"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b5"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10110",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2331"
+  },
+  "registrationNumber": "REG211",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb232f"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b6"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10111",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2334"
+  },
+  "registrationNumber": "REG212",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2332"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b7"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10112",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2337"
+  },
+  "registrationNumber": "REG213",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2335"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b8"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10113",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb233a"
+  },
+  "registrationNumber": "REG214",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2338"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b9"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10114",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb233d"
+  },
+  "registrationNumber": "REG215",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb233b"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ba"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10115",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2340"
+  },
+  "registrationNumber": "REG216",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb233e"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bb"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10116",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2343"
+  },
+  "registrationNumber": "REG217",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2341"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bc"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10117",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2346"
+  },
+  "registrationNumber": "REG218",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2344"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bd"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10118",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2349"
+  },
+  "registrationNumber": "REG219",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2347"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21be"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10119",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb234c"
+  },
+  "registrationNumber": "REG220",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb234a"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bf"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10120",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb234f"
+  },
+  "registrationNumber": "REG221",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb234d"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10121",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2352"
+  },
+  "registrationNumber": "REG222",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2350"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10122",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2355"
+  },
+  "registrationNumber": "REG223",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2353"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10123",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2358"
+  },
+  "registrationNumber": "REG224",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2356"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10124",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb235b"
+  },
+  "registrationNumber": "REG225",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2359"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10125",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb235e"
+  },
+  "registrationNumber": "REG226",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb235c"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ac"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10126",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2361"
+  },
+  "registrationNumber": "REG227",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb235f"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ad"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10127",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2364"
+  },
+  "registrationNumber": "REG228",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2362"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ae"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10128",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2367"
+  },
+  "registrationNumber": "REG229",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2365"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21af"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10129",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb236a"
+  },
+  "registrationNumber": "REG230",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2368"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10130",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb236d"
+  },
+  "registrationNumber": "REG231",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb236b"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10131",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2370"
+  },
+  "registrationNumber": "REG232",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb236e"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10132",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2373"
+  },
+  "registrationNumber": "REG233",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2371"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10133",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2376"
+  },
+  "registrationNumber": "REG234",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2374"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b4"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10134",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2379"
+  },
+  "registrationNumber": "REG235",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2377"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b5"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10135",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb237c"
+  },
+  "registrationNumber": "REG236",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb237a"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b6"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10136",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb237f"
+  },
+  "registrationNumber": "REG237",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb237d"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b7"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10137",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2382"
+  },
+  "registrationNumber": "REG238",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2380"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b8"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10138",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2385"
+  },
+  "registrationNumber": "REG239",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2383"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b9"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10139",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2388"
+  },
+  "registrationNumber": "REG240",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2386"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ba"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10140",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb238b"
+  },
+  "registrationNumber": "REG241",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2389"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bb"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10141",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb238e"
+  },
+  "registrationNumber": "REG242",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb238c"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bc"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10142",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2391"
+  },
+  "registrationNumber": "REG243",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb238f"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bd"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10143",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2394"
+  },
+  "registrationNumber": "REG244",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2392"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21be"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10144",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2397"
+  },
+  "registrationNumber": "REG245",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2395"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bf"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10145",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb239a"
+  },
+  "registrationNumber": "REG246",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2398"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10146",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb239d"
+  },
+  "registrationNumber": "REG247",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb239b"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10147",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23a0"
+  },
+  "registrationNumber": "REG248",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb239e"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10148",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23a3"
+  },
+  "registrationNumber": "REG249",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23a1"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10149",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23a6"
+  },
+  "registrationNumber": "REG250",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23a4"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10150",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23a9"
+  },
+  "registrationNumber": "REG251",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23a7"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ac"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10151",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23ac"
+  },
+  "registrationNumber": "REG252",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23aa"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ad"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10152",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23af"
+  },
+  "registrationNumber": "REG253",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23ad"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ae"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10153",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23b2"
+  },
+  "registrationNumber": "REG254",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23b0"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21af"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10154",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23b5"
+  },
+  "registrationNumber": "REG255",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23b3"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10155",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23b8"
+  },
+  "registrationNumber": "REG256",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23b6"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10156",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23bb"
+  },
+  "registrationNumber": "REG257",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23b9"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10157",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23be"
+  },
+  "registrationNumber": "REG258",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23bc"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10158",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23c1"
+  },
+  "registrationNumber": "REG259",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23bf"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b4"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10159",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23c4"
+  },
+  "registrationNumber": "REG260",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23c2"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b5"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10160",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23c7"
+  },
+  "registrationNumber": "REG261",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23c5"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b6"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10161",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23ca"
+  },
+  "registrationNumber": "REG262",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23c8"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b7"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10162",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23cd"
+  },
+  "registrationNumber": "REG263",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23cb"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b8"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10163",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23d0"
+  },
+  "registrationNumber": "REG264",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23ce"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b9"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10164",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23d3"
+  },
+  "registrationNumber": "REG265",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23d1"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ba"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10165",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23d6"
+  },
+  "registrationNumber": "REG266",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23d4"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bb"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10166",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23d9"
+  },
+  "registrationNumber": "REG267",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23d7"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bc"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10167",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23dc"
+  },
+  "registrationNumber": "REG268",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23da"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bd"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10168",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23df"
+  },
+  "registrationNumber": "REG269",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23dd"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21be"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10169",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23e2"
+  },
+  "registrationNumber": "REG270",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23e0"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bf"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10170",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23e5"
+  },
+  "registrationNumber": "REG271",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23e3"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10171",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23e8"
+  },
+  "registrationNumber": "REG272",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23e6"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10172",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23eb"
+  },
+  "registrationNumber": "REG273",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23e9"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10173",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23ee"
+  },
+  "registrationNumber": "REG274",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23ec"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10174",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23f1"
+  },
+  "registrationNumber": "REG275",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23ef"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10175",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23f4"
+  },
+  "registrationNumber": "REG276",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23f2"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ac"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10176",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23f7"
+  },
+  "registrationNumber": "REG277",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23f5"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ad"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10177",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23fa"
+  },
+  "registrationNumber": "REG278",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23f8"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ae"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10178",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb23fd"
+  },
+  "registrationNumber": "REG279",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23fb"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21af"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10179",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2400"
+  },
+  "registrationNumber": "REG280",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb23fe"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a2"
+  },
+  "deviceId": "DEV-10180",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2403"
+  },
+  "registrationNumber": "REG281",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2401"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10181",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2406"
+  },
+  "registrationNumber": "REG282",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2404"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10182",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2409"
+  },
+  "registrationNumber": "REG283",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2407"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a3"
+  },
+  "deviceId": "DEV-10183",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb240c"
+  },
+  "registrationNumber": "REG284",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb240a"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b4"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10184",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb240f"
+  },
+  "registrationNumber": "REG285",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb240d"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b5"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10185",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2412"
+  },
+  "registrationNumber": "REG286",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2410"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b6"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10186",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2016,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2415"
+  },
+  "registrationNumber": "REG287",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2413"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b7"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10187",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2017,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2418"
+  },
+  "registrationNumber": "REG288",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2416"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b8"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a4"
+  },
+  "deviceId": "DEV-10188",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2018,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb241b"
+  },
+  "registrationNumber": "REG289",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2419"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21b9"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10189",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2019,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb241e"
+  },
+  "registrationNumber": "REG290",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb241c"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ba"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10190",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2020,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2421"
+  },
+  "registrationNumber": "REG291",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb241f"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bb"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a5"
+  },
+  "deviceId": "DEV-10191",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2021,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2424"
+  },
+  "registrationNumber": "REG292",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2422"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bc"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10192",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2022,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2427"
+  },
+  "registrationNumber": "REG293",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2425"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bd"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a6"
+  },
+  "deviceId": "DEV-10193",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2023,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb242a"
+  },
+  "registrationNumber": "REG294",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2428"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21be"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10194",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2024,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb242d"
+  },
+  "registrationNumber": "REG295",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb242b"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21bf"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a7"
+  },
+  "deviceId": "DEV-10195",
+  "isActive": true,
+  "status": "flagged",
+  "color": "Yellow",
+  "year": 2010,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2430"
+  },
+  "registrationNumber": "REG296",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb242e"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c0"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10196",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2011,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2433"
+  },
+  "registrationNumber": "REG297",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2431"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c1"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a8"
+  },
+  "deviceId": "DEV-10197",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2012,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2436"
+  },
+  "registrationNumber": "REG298",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2434"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c2"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10198",
+  "isActive": true,
+  "status": "active",
+  "color": "Yellow",
+  "year": 2013,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb2439"
+  },
+  "registrationNumber": "REG299",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb2437"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21c3"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a9"
+  },
+  "deviceId": "DEV-10199",
+  "isActive": true,
+  "status": "active",
+  "color": "Blue",
+  "year": 2014,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f42dc0a2184037f1cb243c"
+  },
+  "registrationNumber": "REG300",
+  "driver": {
+    "$oid": "69f42dc0a2184037f1cb243a"
+  },
+  "district": {
+    "$oid": "69f42dbea2184037f1cb21ab"
+  },
+  "province": {
+    "$oid": "69f42dbea2184037f1cb21a1"
+  },
+  "deviceId": "DEV-10200",
+  "isActive": true,
+  "status": "active",
+  "color": "Green",
+  "year": 2015,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T04:36:16.977Z"
+  }
+}]
